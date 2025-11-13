@@ -1,262 +1,849 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Real Estate — Modern Template</title>
-  <meta name="description" content="Modern responsive real estate listing template." />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/comparison.css" />
-</head>
-<body>
-  <div class="container">
-    <header>
-      <a href="index.html" style="text-decoration: none;">
-        <div class="brand">
-          <div class="logo">RE</div>
-          <div>
-            <div style="font-weight:700">RealEstra</div>
-            <div style="font-size:12px;color:var(--muted)">Find your next home</div>
-          </div>
-        </div>
-      </a>
-
-      <div class="header-right">
-        <nav>
-          <a href="index.html">Listings</a>
-          <a href="pages/about.html">About</a>
-          <a href="pages/agents.html">Agents</a>
-          <a href="pages/contact.html">Contact</a>
-          <button class="btn">Add Listing</button>
-        </nav>
-      </div>
-    </header>
-
-    <section class="hero">
-      <div class="hero-left">
-        <h1>Search beautiful homes & apartments</h1>
-        <p class="muted" style="color:gray;font-size:14px">Browse verified listings — filter by price, bedrooms, neighbourhood and more. New properties added daily.</p>
-
-        <form class="search-card" onsubmit="event.preventDefault();" style="display:flex;gap:8px;margin-top:12px">
-          <input aria-label="Search city or neighbourhood" placeholder="City, neighbourhood, or ZIP" style="flex:2;padding:8px;border-radius:6px;border:1px solid #ccc" />
-          <select aria-label="Property type" style="flex:1;padding:8px;border-radius:6px;border:1px solid #ccc">
-            <option>Any type</option>
-            <option>Apartment</option>
-            <option>House</option>
-            <option>Townhouse</option>
-          </select>
-          <select aria-label="Min beds" style="flex:1;padding:8px;border-radius:6px;border:1px solid #ccc">
-            <option>Any beds</option>
-            <option>1+</option>
-            <option>2+</option>
-            <option>3+</option>
-          </select>
-          <button class="btn" style="flex:0 0 auto;padding:8px 12px;background-color:#007BFF;color:white;border:none;border-radius:6px;cursor:pointer">Search</button>
-        </form>
-      </div>
-
-      <div style="width:360px;margin-top:20px">
-        <div class="card" style="padding:12px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.1)">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-            <div><strong>Featured</strong><div class="muted" style="font-size:13px;color:gray">Popular picks for you</div></div>
-            <div class="muted" style="font-size:12px;color:gray">Updated: 2025-11-03</div>
-          </div>
-          <div style="display:flex;gap:10px;align-items:center">
-            <img src="https://images.unsplash.com/photo-1560184897-6e0a4ad3b8f8?auto=format&fit=crop&w=400&q=60" alt="sample" style="width:92px;height:72px;object-fit:cover;border-radius:8px" />
-            <div style="flex:1">
-              <div style="font-weight:700">Modern Family Home</div>
-              <div class="muted" style="font-size:13px;color:gray">3 bd · 2 ba · 145 m²</div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Real Estate — Modern Template</title>
+    <meta
+      name="description"
+      content="Modern responsive real estate listing template."
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/comparison.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="index.html" style="text-decoration: none">
+          <div class="brand">
+            <div class="logo">RE</div>
+            <div>
+              <div style="font-weight: 700">RealEstra</div>
+              <div style="font-size: 12px; color: var(--muted)">
+                Find your next home
+              </div>
             </div>
           </div>
+        </a>
+
+        <div class="header-right">
+          <nav>
+            <a href="index.html">Listings</a>
+            <a href="pages/about.html">About</a>
+            <a href="pages/agents.html">Agents</a>
+            <a href="pages/contact.html">Contact</a>
+            <button class="btn">Add Listing</button>
+            <button
+              id="theme-toggle"
+              aria-label="Toggle dark mode"
+              style="
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 10px 12px;
+                border-radius: 10px;
+                border: 1px solid #eef3fb;
+                background: white;
+                cursor: pointer;
+                font-size: 18px;
+                z-index: 1000;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              "
+            >
+              🌙
+            </button>
+          </nav>
         </div>
-      </div>
-    </section>
+      </header>
 
-    <main class="layout" style="display:flex;gap:20px;margin-top:24px">
-      <aside style="flex:1;max-width:280px">
-        <div class="card" style="padding:16px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.05)">
-          <h3 style="margin-top:0">Filters</h3>
+      <section class="hero">
+        <div class="hero-left">
+          <h1>Search beautiful homes & apartments</h1>
+          <p class="muted" style="color: gray; font-size: 14px">
+            Browse verified listings — filter by price, bedrooms, neighbourhood
+            and more. New properties added daily.
+          </p>
 
-          <div class="filter-group" style="margin-bottom:12px">
-            <label>Price range</label>
-            <div class="range" style="display:flex;gap:8px;margin-top:4px">
-              <input placeholder="Min" style="flex:1;padding:6px;border-radius:6px;border:1px solid #ccc" />
-              <input placeholder="Max" style="flex:1;padding:6px;border-radius:6px;border:1px solid #ccc" />
-            </div>
-          </div>
-
-          <div class="filter-group" style="margin-bottom:12px">
-            <label>Bedrooms</label>
-            <div class="checkbox-list" style="display:flex;flex-direction:column;margin-top:4px">
-              <label><input type="checkbox" /> Studio</label>
-              <label><input type="checkbox" /> 1</label>
-              <label><input type="checkbox" /> 2+</label>
-              <label><input type="checkbox" /> 3+</label>
-            </div>
-          </div>
-
-          <div class="filter-group" style="margin-bottom:12px">
-            <label>More</label>
-            <div class="checkbox-list" style="display:flex;flex-direction:column;margin-top:4px">
-              <label><input type="checkbox" /> Parking</label>
-              <label><input type="checkbox" /> Pet friendly</label>
-              <label><input type="checkbox" /> Furnished</label>
-            </div>
-          </div>
-
-          <div style="display:flex;gap:10px;margin-top:10px">
-            <button class="btn" style="flex:1;padding:8px;border-radius:6px;border:none;background-color:#007BFF;color:white;cursor:pointer">Apply</button>
-            <button class="ghost" style="flex:1;padding:8px;border-radius:6px;border:1px solid #ccc;background:white;cursor:pointer">Reset</button>
-          </div>
+          <form
+            class="search-card"
+            onsubmit="event.preventDefault();"
+            style="display: flex; gap: 8px; margin-top: 12px"
+          >
+            <input
+              aria-label="Search city or neighbourhood"
+              placeholder="City, neighbourhood, or ZIP"
+              style="
+                flex: 2;
+                padding: 8px;
+                border-radius: 6px;
+                border: 1px solid #ccc;
+              "
+            />
+            <select
+              aria-label="Property type"
+              style="
+                flex: 1;
+                padding: 8px;
+                border-radius: 6px;
+                border: 1px solid #ccc;
+              "
+            >
+              <option>Any type</option>
+              <option>Apartment</option>
+              <option>House</option>
+              <option>Townhouse</option>
+            </select>
+            <select
+              aria-label="Min beds"
+              style="
+                flex: 1;
+                padding: 8px;
+                border-radius: 6px;
+                border: 1px solid #ccc;
+              "
+            >
+              <option>Any beds</option>
+              <option>1+</option>
+              <option>2+</option>
+              <option>3+</option>
+            </select>
+            <button
+              class="btn"
+              style="
+                flex: 0 0 auto;
+                padding: 8px 12px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+              "
+            >
+              Search
+            </button>
+          </form>
         </div>
 
-        <div class="card" style="margin-top:16px;padding:16px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.05)">
-          <h4 style="margin:0 0 8px">Contact an agent</h4>
-          <div class="muted" style="color:gray;font-size:13px">Questions about a property? We'll connect you to a local agent.</div>
-          <div style="margin-top:12px">
-            <input placeholder="Your name" style="width:100%;padding:10px;border-radius:8px;border:1px solid #eef3fb;margin-bottom:8px" />
-            <input placeholder="Phone or email" style="width:100%;padding:10px;border-radius:8px;border:1px solid #eef3fb;margin-bottom:8px" />
-            <button class="btn" style="width:100%;padding:10px;border-radius:8px;border:none;background-color:#007BFF;color:white;cursor:pointer">Request callback</button>
-          </div>
-        </div>
-      </aside>
-
-      <section style="flex:3">
-        <div style="display:flex;justify-content:space-between;align-items:center">
-          <h2 id="listings">Properties</h2>
-          <div class="muted" style="color:gray">Showing <strong>24</strong> results</div>
-        </div>
-
-        <div class="grid" style="margin-top:12px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px">
-
-          <article class="prop" style="border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.05);background:white">
-            <input type="checkbox" class="compare-checkbox" data-id="1" data-title="Charming 2BR Apartment" data-price="€1,350/mo" data-image="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=60" data-beds="2" data-baths="1" data-size="85" data-type="Apartment" data-parking="Yes" data-pets="No" data-furnished="Yes">
-            <div class="media" style="height:180px;background-image:url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=60');background-size:cover;background-position:center"></div>
-            <div class="body" style="padding:12px">
-              <div class="flex" style="display:flex;justify-content:space-between;align-items:flex-start">
-                <div>
-                  <h3 class="title">Charming 2BR Apartment</h3>
-                  <div class="meta" style="color:gray;font-size:13px">Downtown • 2 bd · 1 ba · 85 m²</div>
+        <div style="width: 360px; margin-top: 20px">
+          <div
+            class="card"
+            style="
+              padding: 12px;
+              border-radius: 8px;
+              box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 8px;
+              "
+            >
+              <div>
+                <strong>Featured</strong>
+                <div class="muted" style="font-size: 13px; color: gray">
+                  Popular picks for you
                 </div>
-                <div class="price" style="font-weight:700">€1,350/mo</div>
               </div>
-              <p class="muted" style="margin:8px 0;color:gray;font-size:13px">Bright apartment with balcony and modern kitchen. Walking distance to tram and shops.</p>
-              <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap">
-                <span class="tag" style="background:#f1f1f1;padding:4px 6px;border-radius:4px;font-size:12px">Balcony</span>
-                <span class="tag" style="background:#f1f1f1;padding:4px 6px;border-radius:4px;font-size:12px">Parking</span>
-                <span class="tag" style="background:#f1f1f1;padding:4px 6px;border-radius:4px;font-size:12px">Furnished</span>
-              </div>
-              <div style="display:flex;gap:8px;margin-top:12px">
-                <a href="pages/property-detail.html?id=1" class="ghost" style="flex:1;padding:6px;text-align:center;border:1px solid #ccc;border-radius:6px;text-decoration:none;color:black">View</a>
-                <button class="btn" style="flex:1;padding:6px;border-radius:6px;border:none;background-color:#007BFF;color:white;cursor:pointer">Contact</button>
+              <div class="muted" style="font-size: 12px; color: gray">
+                Updated: 2025-11-03
               </div>
             </div>
-          </article>
-
-          <article class="prop" style="border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.05);background:white">
-            <input type="checkbox" class="compare-checkbox" data-id="2" data-title="Modern Loft" data-price="€1,650/mo" data-image="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=60" data-beds="1" data-baths="1" data-size="65" data-type="Loft" data-parking="No" data-pets="Yes" data-furnished="Yes">
-            <div class="media" style="height:180px;background-image:url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=60');background-size:cover;background-position:center"></div>
-            <div class="body" style="padding:12px">
-              <div class="flex" style="display:flex;justify-content:space-between;align-items:flex-start">
-                <div>
-                  <h3 class="title">Modern Loft</h3>
-                  <div class="meta" style="color:gray;font-size:13px">Arts District • 1 bd · 1 ba · 65 m²</div>
+            <div style="display: flex; gap: 10px; align-items: center">
+              <img
+                src="https://eplan.house/application/files/4415/3038/8048/vid-speredy-DR-22514.jpg"
+                alt="sample"
+                style="
+                  width: 92px;
+                  height: 72px;
+                  object-fit: cover;
+                  border-radius: 8px;
+                "
+              />
+              <div style="flex: 1">
+                <div style="font-weight: 700">Modern Family Home</div>
+                <div class="muted" style="font-size: 13px; color: gray">
+                  3 bd · 2 ba · 145 m²
                 </div>
-                <div class="price" style="font-weight:700">€1,650/mo</div>
-              </div>
-              <p class="muted" style="margin:8px 0;color:gray;font-size:13px">Spacious loft with high ceilings and industrial finishes. Pet-friendly building.</p>
-              <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap">
-                <span class="tag" style="background:#f1f1f1;padding:4px 6px;border-radius:4px;font-size:12px">High Ceilings</span>
-                <span class="tag" style="background:#f1f1f1;padding:4px 6px;border-radius:4px;font-size:12px">Pet Friendly</span>
-                <span class="tag" style="background:#f1f1f1;padding:4px 6px;border-radius:4px;font-size:12px">Furnished</span>
-              </div>
-              <div style="display:flex;gap:8px;margin-top:12px">
-                <a href="pages/property-detail.html?id=2" class="ghost" style="flex:1;padding:6px;text-align:center;border:1px solid #ccc;border-radius:6px;text-decoration:none;color:black">View</a>
-                <button class="btn" style="flex:1;padding:6px;border-radius:6px;border:none;background-color:#007BFF;color:white;cursor:pointer">Contact</button>
               </div>
             </div>
-          </article>
-
-          <article class="prop" style="border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.05);background:white">
-            <input type="checkbox" class="compare-checkbox" data-id="3" data-title="Family Townhouse" data-price="€2,200/mo" data-image="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=1200&q=60" data-beds="3" data-baths="2" data-size="120" data-type="Townhouse" data-parking="Yes" data-pets="Yes" data-furnished="No">
-            <div class="media" style="height:180px;background-image:url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=1200&q=60');background-size:cover;background-position:center"></div>
-            <div class="body" style="padding:12px">
-              <div class="flex" style="display:flex;justify-content:space-between;align-items:flex-start">
-                <div>
-                  <h3 class="title">Family Townhouse</h3>
-                  <div class="meta" style="color:gray;font-size:13px">Suburbs • 3 bd · 2 ba · 120 m²</div>
-                </div>
-                <div class="price" style="font-weight:700">€2,200/mo</div>
-              </div>
-              <p class="muted" style="margin:8px 0;color:gray;font-size:13px">Spacious townhouse with garden and garage. Perfect for families with children.</p>
-              <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap">
-                <span class="tag" style="background:#f1f1f1;padding:4px 6px;border-radius:4px;font-size:12px">Garden</span>
-                <span class="tag" style="background:#f1f1f1;padding:4px 6px;border-radius:4px;font-size:12px">Garage</span>
-                <span class="tag" style="background:#f1f1f1;padding:4px 6px;border-radius:4px;font-size:12px">Pet Friendly</span>
-              </div>
-              <div style="display:flex;gap:8px;margin-top:12px">
-                <a href="pages/property-detail.html?id=3" class="ghost" style="flex:1;padding:6px;text-align:center;border:1px solid #ccc;border-radius:6px;text-decoration:none;color:black">View</a>
-                <button class="btn" style="flex:1;padding:6px;border-radius:6px;border:none;background-color:#007BFF;color:white;cursor:pointer">Contact</button>
-              </div>
-            </div>
-          </article>
-
+          </div>
         </div>
       </section>
-    </main>
 
-    <!-- Comparison Bar -->
-    <div class="comparison-bar" id="comparisonBar">
-      <div class="comparison-items" id="comparisonItems">
-        <!-- Comparison items will be added here dynamically -->
+      <main class="layout" style="display: flex; gap: 20px; margin-top: 24px">
+        <aside style="flex: 1; max-width: 280px">
+          <div
+            class="card"
+            style="
+              padding: 16px;
+              border-radius: 8px;
+              box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            "
+          >
+            <h3 style="margin-top: 0">Filters</h3>
+
+            <div class="filter-group" style="margin-bottom: 12px">
+              <label>Price range</label>
+              <div
+                class="range"
+                style="display: flex; gap: 8px; margin-top: 4px"
+              >
+                <input
+                  placeholder="Min"
+                  style="
+                    flex: 1;
+                    padding: 6px;
+                    border-radius: 6px;
+                    border: 1px solid #ccc;
+                  "
+                />
+                <input
+                  placeholder="Max"
+                  style="
+                    flex: 1;
+                    padding: 6px;
+                    border-radius: 6px;
+                    border: 1px solid #ccc;
+                  "
+                />
+              </div>
+            </div>
+
+            <div class="filter-group" style="margin-bottom: 12px">
+              <label>Bedrooms</label>
+              <div
+                class="checkbox-list"
+                style="display: flex; flex-direction: column; margin-top: 4px"
+              >
+                <label><input type="checkbox" /> Studio</label>
+                <label><input type="checkbox" /> 1</label>
+                <label><input type="checkbox" /> 2+</label>
+                <label><input type="checkbox" /> 3+</label>
+              </div>
+            </div>
+
+            <div class="filter-group" style="margin-bottom: 12px">
+              <label>More</label>
+              <div
+                class="checkbox-list"
+                style="display: flex; flex-direction: column; margin-top: 4px"
+              >
+                <label><input type="checkbox" /> Parking</label>
+                <label><input type="checkbox" /> Pet friendly</label>
+                <label><input type="checkbox" /> Furnished</label>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 10px; margin-top: 10px">
+              <button
+                class="btn"
+                style="
+                  flex: 1;
+                  padding: 8px;
+                  border-radius: 6px;
+                  border: none;
+                  background-color: #007bff;
+                  color: white;
+                  cursor: pointer;
+                "
+              >
+                Apply
+              </button>
+              <button
+                class="ghost"
+                style="
+                  flex: 1;
+                  padding: 8px;
+                  border-radius: 6px;
+                  border: 1px solid #ccc;
+                  background: white;
+                  cursor: pointer;
+                "
+              >
+                Reset
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="card"
+            style="
+              margin-top: 16px;
+              padding: 16px;
+              border-radius: 8px;
+              box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            "
+          >
+            <h4 style="margin: 0 0 8px">Contact an agent</h4>
+            <div class="muted" style="color: gray; font-size: 13px">
+              Questions about a property? We'll connect you to a local agent.
+            </div>
+            <div style="margin-top: 12px">
+              <input
+                placeholder="Your name"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  border-radius: 8px;
+                  border: 1px solid #eef3fb;
+                  margin-bottom: 8px;
+                "
+              />
+              <input
+                placeholder="Phone or email"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  border-radius: 8px;
+                  border: 1px solid #eef3fb;
+                  margin-bottom: 8px;
+                "
+              />
+              <button
+                class="btn"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  border-radius: 8px;
+                  border: none;
+                  background-color: #007bff;
+                  color: white;
+                  cursor: pointer;
+                "
+              >
+                Request callback
+              </button>
+            </div>
+          </div>
+        </aside>
+
+        <section style="flex: 3">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <h2 id="listings">Properties</h2>
+            <div class="muted" style="color: gray">
+              Showing <strong>24</strong> results
+            </div>
+          </div>
+
+          <div
+            class="grid"
+            style="
+              margin-top: 12px;
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+              gap: 16px;
+            "
+          >
+            <article
+              class="prop"
+              style="
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+                background: white;
+              "
+            >
+              <input
+                type="checkbox"
+                class="compare-checkbox"
+                data-id="1"
+                data-title="Charming 2BR Apartment"
+                data-price="€1,350/mo"
+                data-image="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=60"
+                data-beds="2"
+                data-baths="1"
+                data-size="85"
+                data-type="Apartment"
+                data-parking="Yes"
+                data-pets="No"
+                data-furnished="Yes"
+              />
+              <div
+                class="media"
+                style="
+                  height: 180px;
+                  background-image: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=60');
+                  background-size: cover;
+                  background-position: center;
+                "
+              ></div>
+              <div class="body" style="padding: 12px">
+                <div
+                  class="flex"
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                  "
+                >
+                  <div>
+                    <h3 class="title">Charming 2BR Apartment</h3>
+                    <div class="meta" style="color: gray; font-size: 13px">
+                      Downtown • 2 bd · 1 ba · 85 m²
+                    </div>
+                  </div>
+                  <div class="price" style="font-weight: 700">€1,350/mo</div>
+                </div>
+                <p
+                  class="muted"
+                  style="margin: 8px 0; color: gray; font-size: 13px"
+                >
+                  Bright apartment with balcony and modern kitchen. Walking
+                  distance to tram and shops.
+                </p>
+                <div
+                  class="tags"
+                  style="display: flex; gap: 6px; flex-wrap: wrap"
+                >
+                  <span
+                    class="tag"
+                    style="
+                      background: #f1f1f1;
+                      padding: 4px 6px;
+                      border-radius: 4px;
+                      font-size: 12px;
+                    "
+                    >Balcony</span
+                  >
+                  <span
+                    class="tag"
+                    style="
+                      background: #f1f1f1;
+                      padding: 4px 6px;
+                      border-radius: 4px;
+                      font-size: 12px;
+                    "
+                    >Parking</span
+                  >
+                  <span
+                    class="tag"
+                    style="
+                      background: #f1f1f1;
+                      padding: 4px 6px;
+                      border-radius: 4px;
+                      font-size: 12px;
+                    "
+                    >Furnished</span
+                  >
+                </div>
+                <div style="display: flex; gap: 8px; margin-top: 12px">
+                  <a
+                    href="pages/property-detail.html?id=1"
+                    class="ghost"
+                    style="
+                      flex: 1;
+                      padding: 6px;
+                      text-align: center;
+                      border: 1px solid #ccc;
+                      border-radius: 6px;
+                      text-decoration: none;
+                      color: black;
+                    "
+                    >View</a
+                  >
+                  <button
+                    class="btn"
+                    style="
+                      flex: 1;
+                      padding: 6px;
+                      border-radius: 6px;
+                      border: none;
+                      background-color: #007bff;
+                      color: white;
+                      cursor: pointer;
+                    "
+                  >
+                    Contact
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="prop"
+              style="
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+                background: white;
+              "
+            >
+              <input
+                type="checkbox"
+                class="compare-checkbox"
+                data-id="2"
+                data-title="Modern Loft"
+                data-price="€1,650/mo"
+                data-image="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=60"
+                data-beds="1"
+                data-baths="1"
+                data-size="65"
+                data-type="Loft"
+                data-parking="No"
+                data-pets="Yes"
+                data-furnished="Yes"
+              />
+              <div
+                class="media"
+                style="
+                  height: 180px;
+                  background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=60');
+                  background-size: cover;
+                  background-position: center;
+                "
+              ></div>
+              <div class="body" style="padding: 12px">
+                <div
+                  class="flex"
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                  "
+                >
+                  <div>
+                    <h3 class="title">Modern Loft</h3>
+                    <div class="meta" style="color: gray; font-size: 13px">
+                      Arts District • 1 bd · 1 ba · 65 m²
+                    </div>
+                  </div>
+                  <div class="price" style="font-weight: 700">€1,650/mo</div>
+                </div>
+                <p
+                  class="muted"
+                  style="margin: 8px 0; color: gray; font-size: 13px"
+                >
+                  Spacious loft with high ceilings and industrial finishes.
+                  Pet-friendly building.
+                </p>
+                <div
+                  class="tags"
+                  style="display: flex; gap: 6px; flex-wrap: wrap"
+                >
+                  <span
+                    class="tag"
+                    style="
+                      background: #f1f1f1;
+                      padding: 4px 6px;
+                      border-radius: 4px;
+                      font-size: 12px;
+                    "
+                    >High Ceilings</span
+                  >
+                  <span
+                    class="tag"
+                    style="
+                      background: #f1f1f1;
+                      padding: 4px 6px;
+                      border-radius: 4px;
+                      font-size: 12px;
+                    "
+                    >Pet Friendly</span
+                  >
+                  <span
+                    class="tag"
+                    style="
+                      background: #f1f1f1;
+                      padding: 4px 6px;
+                      border-radius: 4px;
+                      font-size: 12px;
+                    "
+                    >Furnished</span
+                  >
+                </div>
+                <div style="display: flex; gap: 8px; margin-top: 12px">
+                  <a
+                    href="pages/property-detail.html?id=2"
+                    class="ghost"
+                    style="
+                      flex: 1;
+                      padding: 6px;
+                      text-align: center;
+                      border: 1px solid #ccc;
+                      border-radius: 6px;
+                      text-decoration: none;
+                      color: black;
+                    "
+                    >View</a
+                  >
+                  <button
+                    class="btn"
+                    style="
+                      flex: 1;
+                      padding: 6px;
+                      border-radius: 6px;
+                      border: none;
+                      background-color: #007bff;
+                      color: white;
+                      cursor: pointer;
+                    "
+                  >
+                    Contact
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="prop"
+              style="
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+                background: white;
+              "
+            >
+              <input
+                type="checkbox"
+                class="compare-checkbox"
+                data-id="3"
+                data-title="Family Townhouse"
+                data-price="€2,200/mo"
+                data-image="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=1200&q=60"
+                data-beds="3"
+                data-baths="2"
+                data-size="120"
+                data-type="Townhouse"
+                data-parking="Yes"
+                data-pets="Yes"
+                data-furnished="No"
+              />
+              <div
+                class="media"
+                style="
+                  height: 180px;
+                  background-image: url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=1200&q=60');
+                  background-size: cover;
+                  background-position: center;
+                "
+              ></div>
+              <div class="body" style="padding: 12px">
+                <div
+                  class="flex"
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                  "
+                >
+                  <div>
+                    <h3 class="title">Family Townhouse</h3>
+                    <div class="meta" style="color: gray; font-size: 13px">
+                      Suburbs • 3 bd · 2 ba · 120 m²
+                    </div>
+                  </div>
+                  <div class="price" style="font-weight: 700">€2,200/mo</div>
+                </div>
+                <p
+                  class="muted"
+                  style="margin: 8px 0; color: gray; font-size: 13px"
+                >
+                  Spacious townhouse with garden and garage. Perfect for
+                  families with children.
+                </p>
+                <div
+                  class="tags"
+                  style="display: flex; gap: 6px; flex-wrap: wrap"
+                >
+                  <span
+                    class="tag"
+                    style="
+                      background: #f1f1f1;
+                      padding: 4px 6px;
+                      border-radius: 4px;
+                      font-size: 12px;
+                    "
+                    >Garden</span
+                  >
+                  <span
+                    class="tag"
+                    style="
+                      background: #f1f1f1;
+                      padding: 4px 6px;
+                      border-radius: 4px;
+                      font-size: 12px;
+                    "
+                    >Garage</span
+                  >
+                  <span
+                    class="tag"
+                    style="
+                      background: #f1f1f1;
+                      padding: 4px 6px;
+                      border-radius: 4px;
+                      font-size: 12px;
+                    "
+                    >Pet Friendly</span
+                  >
+                </div>
+                <div style="display: flex; gap: 8px; margin-top: 12px">
+                  <a
+                    href="pages/property-detail.html?id=3"
+                    class="ghost"
+                    style="
+                      flex: 1;
+                      padding: 6px;
+                      text-align: center;
+                      border: 1px solid #ccc;
+                      border-radius: 6px;
+                      text-decoration: none;
+                      color: black;
+                    "
+                    >View</a
+                  >
+                  <button
+                    class="btn"
+                    style="
+                      flex: 1;
+                      padding: 6px;
+                      border-radius: 6px;
+                      border: none;
+                      background-color: #007bff;
+                      color: white;
+                      cursor: pointer;
+                    "
+                  >
+                    Contact
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <!-- Comparison Bar -->
+      <div class="comparison-bar" id="comparisonBar">
+        <div class="comparison-items" id="comparisonItems">
+          <!-- Comparison items will be added here dynamically -->
+        </div>
+        <div class="comparison-actions">
+          <button class="ghost" id="clearComparison">Clear All</button>
+          <button class="btn" id="compareNow">Compare (0)</button>
+        </div>
       </div>
-      <div class="comparison-actions">
-        <button class="ghost" id="clearComparison">Clear All</button>
-        <button class="btn" id="compareNow">Compare (0)</button>
+
+      <!-- Comparison Modal -->
+      <div class="comparison-modal" id="comparisonModal">
+        <div class="comparison-modal-content">
+          <div class="comparison-modal-header">
+            <h2>Compare Properties</h2>
+            <button class="close-modal" id="closeComparisonModal">
+              &times;
+            </button>
+          </div>
+          <div class="comparison-grid" id="comparisonGrid">
+            <!-- Comparison properties will be added here dynamically -->
+          </div>
+        </div>
       </div>
+
+      <!-- Testimonials Section -->
+      <section
+        class="testimonials"
+        style="padding: 40px 0; background: #f9f9f9; text-align: center"
+      >
+        <div class="container">
+          <h2>What Our Clients Say</h2>
+          <p class="muted" style="color: gray; font-size: 14px">
+            Hear from some of our happy homeowners
+          </p>
+          <div
+            class="testimonials-grid"
+            style="
+              display: flex;
+              gap: 20px;
+              justify-content: center;
+              flex-wrap: wrap;
+              margin-top: 20px;
+            "
+          >
+            <div
+              class="testimonial-card"
+              style="
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                flex: 1;
+                max-width: 250px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+              "
+            >
+              <p>"Found my dream home thanks to RealEstra!"</p>
+              <strong>- Sarah K.</strong>
+            </div>
+            <div
+              class="testimonial-card"
+              style="
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                flex: 1;
+                max-width: 250px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+              "
+            >
+              <p>"Great service and smooth process."</p>
+              <strong>- Mark D.</strong>
+            </div>
+            <div
+              class="testimonial-card"
+              style="
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                flex: 1;
+                max-width: 250px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+              "
+            >
+              <p>"Highly recommend for anyone searching for a new home."</p>
+              <strong>- Emily R.</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">
+          <p>&copy; 2025 RealEstra. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
+    <script>
+      // Debug script - add this temporarily
+      console.log("Debug: HTML loaded");
+      console.log(
+        "Theme toggle button:",
+        document.getElementById("theme-toggle")
+      );
 
-    <!-- Comparison Modal -->
-    <div class="comparison-modal" id="comparisonModal">
-      <div class="comparison-modal-content">
-        <div class="comparison-modal-header">
-          <h2>Compare Properties</h2>
-          <button class="close-modal" id="closeComparisonModal">&times;</button>
-        </div>
-        <div class="comparison-grid" id="comparisonGrid">
-          <!-- Comparison properties will be added here dynamically -->
-        </div>
-      </div>
-    </div>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials" style="padding:40px 0;background:#f9f9f9;text-align:center">
-      <div class="container">
-        <h2>What Our Clients Say</h2>
-        <p class="muted" style="color:gray;font-size:14px">Hear from some of our happy homeowners</p>
-        <div class="testimonials-grid" style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:20px">
-          <div class="testimonial-card" style="background:white;padding:20px;border-radius:8px;flex:1;max-width:250px;box-shadow:0 4px 10px rgba(0,0,0,0.05)">
-            <p>"Found my dream home thanks to RealEstra!"</p>
-            <strong>- Sarah K.</strong>
-          </div>
-          <div class="testimonial-card" style="background:white;padding:20px;border-radius:8px;flex:1;max-width:250px;box-shadow:0 4px 10px rgba(0,0,0,0.05)">
-            <p>"Great service and smooth process."</p>
-            <strong>- Mark D.</strong>
-          </div>
-          <div class="testimonial-card" style="background:white;padding:20px;border-radius:8px;flex:1;max-width:250px;box-shadow:0 4px 10px rgba(0,0,0,0.05)">
-            <p>"Highly recommend for anyone searching for a new home."</p>
-            <strong>- Emily R.</strong>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <p>&copy; 2025 RealEstra. All rights reserved.</p>
-      </div>
-    </footer>
-  </div>
-
-</body>
+      // Simple dark mode test
+      const themeToggle = document.getElementById("theme-toggle");
+      if (themeToggle) {
+        console.log("Button found, adding click event...");
+        themeToggle.addEventListener("click", function () {
+          console.log("Button clicked!");
+          const currentTheme =
+            document.documentElement.getAttribute("data-theme");
+          const newTheme = currentTheme === "dark" ? "light" : "dark";
+          console.log("Switching from", currentTheme, "to", newTheme);
+          document.documentElement.setAttribute("data-theme", newTheme);
+          localStorage.setItem("theme", newTheme);
+          this.textContent = newTheme === "dark" ? "☀️" : "🌙";
+        });
+      } else {
+        console.error("Theme toggle button NOT found!");
+      }
+    </script>
+  </body>
 </html>

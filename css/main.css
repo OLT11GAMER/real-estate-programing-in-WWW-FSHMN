@@ -4,7 +4,8 @@
   --card: #ffffff;
   --bg: #f6f8fb;
   --radius: 12px;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial;
 }
 
 * {
@@ -300,7 +301,8 @@ footer {
   margin-top: 20px;
 }
 
-.comparison-table th, .comparison-table td {
+.comparison-table th,
+.comparison-table td {
   padding: 12px;
   border: 1px solid #ddd;
   text-align: left;
@@ -321,4 +323,123 @@ footer {
 input[type="checkbox"].compare-checkbox {
   transform: scale(1.2);
   margin-right: 8px;
+}
+
+/* ===== DARK MODE STYLES ===== */
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --muted: #94a3b8;
+  --brand: #3b82f6;
+}
+
+[data-theme="dark"] body {
+  background: linear-gradient(180deg, var(--bg), #1e293b) !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .card {
+  background: var(--card) !important;
+  border-color: #334155 !important;
+}
+
+[data-theme="dark"] .hero {
+  background: linear-gradient(
+    180deg,
+    rgba(59, 130, 246, 0.08),
+    transparent
+  ) !important;
+}
+
+[data-theme="dark"] .search-card {
+  background: var(--card) !important;
+  border: 1px solid #334155 !important;
+}
+
+[data-theme="dark"] .search-card input,
+[data-theme="dark"] .search-card select {
+  background: var(--card) !important;
+  border-color: #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] select {
+  background: var(--card) !important;
+  border-color: #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] input::placeholder {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .checkbox-list label {
+  background: #334155 !important;
+  border-color: #475569 !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .ghost {
+  border-color: #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .ghost:hover {
+  background-color: #334155 !important;
+}
+
+[data-theme="dark"] .tag {
+  background: #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .testimonials {
+  background: #1e293b !important;
+}
+
+[data-theme="dark"] .testimonial-card {
+  background: var(--card) !important;
+  border: 1px solid #334155 !important;
+}
+
+[data-theme="dark"] footer {
+  border-top-color: #334155 !important;
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .muted {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .comparison-bar {
+  background: var(--card) !important;
+  border-top-color: #334155 !important;
+}
+
+[data-theme="dark"] .comparison-modal-content {
+  background: var(--card) !important;
+  color: #f1f5f9 !important;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  padding: 10px 12px !important;
+  border-radius: 10px !important;
+  border: 1px solid #eef3fb !important;
+  background: white !important;
+  cursor: pointer !important;
+  font-size: 18px !important;
+  z-index: 1000 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="dark"] #theme-toggle {
+  background: #334155 !important;
+  border-color: #475569 !important;
+  color: white !important;
 }
