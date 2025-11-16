@@ -6,112 +6,16 @@
   <title>Property Details — Real Estate</title>
   <meta name="description" content="View detailed information about this property." />
   <link rel="stylesheet" href="../css/main.css" />
-  <style>
-    .property-detail {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .property-header {
-      margin-bottom: 24px;
-    }
-    .property-gallery {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-    .main-image {
-      height: 400px;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .main-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .thumbnails {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-    .thumbnail {
-      height: 120px;
-      border-radius: 8px;
-      overflow: hidden;
-      cursor: pointer;
-    }
-    .thumbnail img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .property-info {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 24px;
-    }
-    .property-details {
-      background: var(--card);
-      padding: 24px;
-      border-radius: 12px;
-      border: 1px solid #eef3fb;
-    }
-    .property-sidebar {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .contact-card {
-      background: var(--card);
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid #eef3fb;
-    }
-    .specs {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin: 24px 0;
-    }
-    .spec-item {
-      text-align: center;
-      padding: 16px;
-      background: #f9fafb;
-      border-radius: 8px;
-    }
-    .spec-value {
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--brand);
-    }
-    .spec-label {
-      color: var(--muted);
-      font-size: 14px;
-      margin-top: 4px;
-    }
-    @media (max-width: 900px) {
-      .property-gallery {
-        grid-template-columns: 1fr;
-      }
-      .property-info {
-        grid-template-columns: 1fr;
-      }
-      .specs {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <a href="../index.html" style="text-decoration: none;">
+      <a href="../index.html">
         <div class="brand">
           <div class="logo">RE</div>
           <div>
-            <div style="font-weight:700">RealEstra</div>
-            <div style="font-size:12px;color:var(--muted)">Find your next home</div>
+            <div class="brand-name">RealEstra</div>
+            <div class="brand-subtitle">Find your next home</div>
           </div>
         </div>
       </a>
@@ -128,11 +32,11 @@
 
     <main class="property-detail">
       <div class="property-header">
-        <a href="../index.html" class="muted" style="text-decoration: underline;">← Back to listings</a>
-        <h1 style="margin: 12px 0 8px">Charming 2BR Apartment</h1>
-        <div class="flex" style="justify-content: space-between; align-items: center;">
+        <a href="../index.html" class="muted back-link">← Back to listings</a>
+        <h1>Charming 2BR Apartment</h1>
+        <div class="flex property-header-flex">
           <div class="meta">Downtown • 2 bd · 1 ba · 85 m²</div>
-          <div class="price" style="font-size: 28px;">€1,350/mo</div>
+          <div class="price property-price-large">€1,350/mo</div>
         </div>
       </div>
 
@@ -174,7 +78,7 @@
           </div>
 
           <h3>Features</h3>
-          <div class="tags" style="margin-top: 12px;">
+          <div class="tags property-tags">
             <span class="tag">Balcony</span>
             <span class="tag">Parking</span>
             <span class="tag">Furnished</span>
@@ -182,33 +86,33 @@
             <span class="tag">Public Transport</span>
           </div>
 
-          <h3 style="margin-top: 24px;">Location</h3>
+          <h3>Location</h3>
           <p class="muted">Located in the vibrant downtown area, this property is within walking distance of public transportation, shopping centers, restaurants, and schools.</p>
         </div>
 
         <div class="property-sidebar">
           <div class="contact-card">
-            <h3 style="margin-top: 0;">Contact Agent</h3>
-            <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 16px;">
-              <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--brand); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">JD</div>
+            <h3>Contact Agent</h3>
+            <div class="agent-info">
+              <div class="agent-avatar-small">JD</div>
               <div>
-                <div style="font-weight: 700;">John Doe</div>
-                <div class="muted" style="font-size: 14px;">Real Estate Agent</div>
+                <div class="agent-name-small">John Doe</div>
+                <div class="muted agent-title-small">Real Estate Agent</div>
               </div>
             </div>
-            <input placeholder="Your name" style="width:100%;padding:10px;border-radius:8px;border:1px solid #eef3fb;margin-bottom:8px" />
-            <input placeholder="Email" style="width:100%;padding:10px;border-radius:8px;border:1px solid #eef3fb;margin-bottom:8px" />
-            <input placeholder="Phone" style="width:100%;padding:10px;border-radius:8px;border:1px solid #eef3fb;margin-bottom:8px" />
-            <textarea placeholder="Message" rows="4" style="width:100%;padding:10px;border-radius:8px;border:1px solid #eef3fb;margin-bottom:8px;resize:vertical"></textarea>
-            <button class="btn" style="width:100%">Send Message</button>
+            <input class="contact-form-input" placeholder="Your name" />
+            <input class="contact-form-input" placeholder="Email" />
+            <input class="contact-form-input" placeholder="Phone" />
+            <textarea class="contact-form-textarea" placeholder="Message" rows="4"></textarea>
+            <button class="btn contact-form-btn">Send Message</button>
           </div>
 
-          <div class="card">
-            <h4 style="margin:0 0 8px">Schedule a Viewing</h4>
-            <div class="muted" style="font-size: 14px; margin-bottom: 12px;">Book a time to visit this property in person.</div>
-            <input type="date" style="width:100%;padding:10px;border-radius:8px;border:1px solid #eef3fb;margin-bottom:8px" />
-            <input type="time" style="width:100%;padding:10px;border-radius:8px;border:1px solid #eef3fb;margin-bottom:8px" />
-            <button class="btn" style="width:100%">Request Viewing</button>
+          <div class="card schedule-card">
+            <h4>Schedule a Viewing</h4>
+            <div class="muted schedule-subtitle">Book a time to visit this property in person.</div>
+            <input type="date" class="schedule-input" />
+            <input type="time" class="schedule-input" />
+            <button class="btn contact-form-btn">Request Viewing</button>
           </div>
         </div>
       </div>

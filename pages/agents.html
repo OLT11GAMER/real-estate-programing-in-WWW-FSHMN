@@ -6,93 +6,16 @@
   <title>Our Agents — Real Estate</title>
   <meta name="description" content="Meet our team of expert real estate agents." />
   <link rel="stylesheet" href="../css/main.css" />
-  <style>
-    .agents-content {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .agents-header {
-      text-align: center;
-      padding: 48px 0;
-    }
-    .agents-header h1 {
-      font-size: 36px;
-      margin-bottom: 16px;
-    }
-    .agents-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 24px;
-      margin-top: 32px;
-    }
-    .agent-card {
-      background: var(--card);
-      padding: 24px;
-      border-radius: 12px;
-      border: 1px solid #eef3fb;
-      text-align: center;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .agent-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(11, 124, 255, 0.1);
-    }
-    .agent-avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--brand), #7dd3fc);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 42px;
-      font-weight: 700;
-      margin: 0 auto 16px;
-    }
-    .agent-name {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-    .agent-title {
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-    .agent-stats {
-      display: flex;
-      justify-content: space-around;
-      margin: 16px 0;
-      padding: 16px 0;
-      border-top: 1px solid #eef3fb;
-      border-bottom: 1px solid #eef3fb;
-    }
-    .agent-stat {
-      text-align: center;
-    }
-    .agent-stat-value {
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--brand);
-    }
-    .agent-stat-label {
-      font-size: 12px;
-      color: var(--muted);
-    }
-    .agent-contact {
-      margin-top: 16px;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <a href="../index.html" style="text-decoration: none;">
+      <a href="../index.html">
         <div class="brand">
           <div class="logo">RE</div>
           <div>
-            <div style="font-weight:700">RealEstra</div>
-            <div style="font-size:12px;color:var(--muted)">Find your next home</div>
+            <div class="brand-name">RealEstra</div>
+            <div class="brand-subtitle">Find your next home</div>
           </div>
         </div>
       </a>
@@ -110,7 +33,7 @@
     <main class="agents-content">
       <div class="agents-header">
         <h1>Our Expert Agents</h1>
-        <p class="muted" style="font-size: 18px;">Meet the professionals dedicated to helping you find your perfect home</p>
+        <p class="muted agents-subtitle">Meet the professionals dedicated to helping you find your perfect home</p>
       </div>
 
       <div class="agents-grid">
@@ -128,9 +51,9 @@
               <div class="agent-stat-label">Years</div>
             </div>
           </div>
-          <p class="muted" style="font-size: 14px; margin: 12px 0;">Specializes in luxury properties and investment real estate. Expert in downtown and suburban markets.</p>
+          <p class="muted agent-description">Specializes in luxury properties and investment real estate. Expert in downtown and suburban markets.</p>
           <div class="agent-contact">
-            <button class="btn" style="width: 100%;">Contact John</button>
+            <button class="btn agent-contact-btn">Contact John</button>
           </div>
         </div>
 
@@ -148,9 +71,9 @@
               <div class="agent-stat-label">Years</div>
             </div>
           </div>
-          <p class="muted" style="font-size: 14px; margin: 12px 0;">Leading expert in residential properties. Known for exceptional client service and market knowledge.</p>
+          <p class="muted agent-description">Leading expert in residential properties. Known for exceptional client service and market knowledge.</p>
           <div class="agent-contact">
-            <button class="btn" style="width: 100%;">Contact Jane</button>
+            <button class="btn agent-contact-btn">Contact Jane</button>
           </div>
         </div>
 
@@ -168,9 +91,9 @@
               <div class="agent-stat-label">Years</div>
             </div>
           </div>
-          <p class="muted" style="font-size: 14px; margin: 12px 0;">Specializes in first-time homebuyers and family homes. Excellent negotiation skills and attention to detail.</p>
+          <p class="muted agent-description">Specializes in first-time homebuyers and family homes. Excellent negotiation skills and attention to detail.</p>
           <div class="agent-contact">
-            <button class="btn" style="width: 100%;">Contact Mike</button>
+            <button class="btn agent-contact-btn">Contact Mike</button>
           </div>
         </div>
 
@@ -188,9 +111,9 @@
               <div class="agent-stat-label">Years</div>
             </div>
           </div>
-          <p class="muted" style="font-size: 14px; margin: 12px 0;">Expert in commercial real estate and investment properties. Strong background in property development.</p>
+          <p class="muted agent-description">Expert in commercial real estate and investment properties. Strong background in property development.</p>
           <div class="agent-contact">
-            <button class="btn" style="width: 100%;">Contact Sarah</button>
+            <button class="btn agent-contact-btn">Contact Sarah</button>
           </div>
         </div>
 
@@ -208,9 +131,9 @@
               <div class="agent-stat-label">Years</div>
             </div>
           </div>
-          <p class="muted" style="font-size: 14px; margin: 12px 0;">Focuses on high-end properties and luxury estates. Extensive network and premium service.</p>
+          <p class="muted agent-description">Focuses on high-end properties and luxury estates. Extensive network and premium service.</p>
           <div class="agent-contact">
-            <button class="btn" style="width: 100%;">Contact Robert</button>
+            <button class="btn agent-contact-btn">Contact Robert</button>
           </div>
         </div>
 
@@ -228,9 +151,9 @@
               <div class="agent-stat-label">Years</div>
             </div>
           </div>
-          <p class="muted" style="font-size: 14px; margin: 12px 0;">Expert in rental properties and property management. Helps tenants find perfect rental homes.</p>
+          <p class="muted agent-description">Expert in rental properties and property management. Helps tenants find perfect rental homes.</p>
           <div class="agent-contact">
-            <button class="btn" style="width: 100%;">Contact Emily</button>
+            <button class="btn agent-contact-btn">Contact Emily</button>
           </div>
         </div>
       </div>

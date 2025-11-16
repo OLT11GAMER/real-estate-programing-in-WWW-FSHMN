@@ -6,116 +6,16 @@
   <title>Contact Us — Real Estate</title>
   <meta name="description" content="Get in touch with RealEstra for all your real estate needs." />
   <link rel="stylesheet" href="../css/main.css" />
-  <style>
-    .contact-content {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .contact-header {
-      text-align: center;
-      padding: 48px 0;
-    }
-    .contact-header h1 {
-      font-size: 36px;
-      margin-bottom: 16px;
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      margin-top: 32px;
-    }
-    .contact-form {
-      background: var(--card);
-      padding: 32px;
-      border-radius: 12px;
-      border: 1px solid #eef3fb;
-    }
-    .contact-form h2 {
-      margin-top: 0;
-      margin-bottom: 24px;
-    }
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form select {
-      width: 100%;
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #eef3fb;
-      margin-bottom: 16px;
-      font-family: inherit;
-    }
-    .contact-form textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-    .info-card {
-      background: var(--card);
-      padding: 24px;
-      border-radius: 12px;
-      border: 1px solid #eef3fb;
-    }
-    .info-card h3 {
-      margin-top: 0;
-      margin-bottom: 12px;
-    }
-    .info-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-    .info-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 8px;
-      background: #eef7ff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--brand);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-    .office-hours {
-      margin-top: 16px;
-    }
-    .office-hours table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .office-hours td {
-      padding: 8px 0;
-      border-bottom: 1px solid #eef3fb;
-    }
-    .office-hours td:first-child {
-      font-weight: 600;
-    }
-    .office-hours td:last-child {
-      color: var(--muted);
-      text-align: right;
-    }
-    @media (max-width: 900px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <a href="../index.html" style="text-decoration: none;">
+      <a href="../index.html">
         <div class="brand">
           <div class="logo">RE</div>
           <div>
-            <div style="font-weight:700">RealEstra</div>
-            <div style="font-size:12px;color:var(--muted)">Find your next home</div>
+            <div class="brand-name">RealEstra</div>
+            <div class="brand-subtitle">Find your next home</div>
           </div>
         </div>
       </a>
@@ -133,7 +33,7 @@
     <main class="contact-content">
       <div class="contact-header">
         <h1>Contact Us</h1>
-        <p class="muted" style="font-size: 18px;">We're here to help you with all your real estate needs</p>
+        <p class="muted contact-subtitle">We're here to help you with all your real estate needs</p>
       </div>
 
       <div class="contact-grid">
@@ -152,7 +52,7 @@
               <option>Other</option>
             </select>
             <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+            <button type="submit" class="btn contact-form-btn">Send Message</button>
           </form>
         </div>
 
@@ -162,21 +62,21 @@
             <div class="info-item">
               <div class="info-icon">📍</div>
               <div>
-                <div style="font-weight: 600;">Address</div>
+                <div class="info-label">Address</div>
                 <div class="muted">123 Real Estate Street<br />City Center, 10001</div>
               </div>
             </div>
             <div class="info-item">
               <div class="info-icon">📞</div>
               <div>
-                <div style="font-weight: 600;">Phone</div>
+                <div class="info-label">Phone</div>
                 <div class="muted">+1 (555) 123-4567</div>
               </div>
             </div>
             <div class="info-item">
               <div class="info-icon">✉️</div>
               <div>
-                <div style="font-weight: 600;">Email</div>
+                <div class="info-label">Email</div>
                 <div class="muted">info@realestra.com</div>
               </div>
             </div>
@@ -205,7 +105,7 @@
           <div class="info-card">
             <h3>Emergency Contact</h3>
             <p class="muted">For urgent matters outside office hours, please call our emergency line:</p>
-            <div style="font-size: 20px; font-weight: 700; color: var(--brand); margin-top: 8px;">
+            <div class="emergency-contact">
               +1 (555) 123-HELP
             </div>
           </div>

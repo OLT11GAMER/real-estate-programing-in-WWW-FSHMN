@@ -218,4 +218,309 @@
   color: var(--muted);
 }
 
+// Brand styles
+.brand-name {
+  font-weight: 700;
+}
+
+.brand-subtitle {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+// Header link
+header a {
+  text-decoration: none;
+}
+
+// Search form styles
+.search-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.search-input {
+  flex: 2;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.search-select {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.search-btn {
+  flex: 0 0 auto;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+// Featured card
+.featured-wrapper {
+  width: 360px;
+  margin-top: 20px;
+}
+
+.featured-card {
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.featured-updated {
+  font-size: 12px;
+  color: gray;
+}
+
+.featured-content {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.featured-image {
+  width: 92px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.featured-info {
+  flex: 1;
+}
+
+.featured-title {
+  font-weight: 700;
+}
+
+.featured-meta {
+  font-size: 13px;
+  color: gray;
+}
+
+// Filter card styles
+.filter-card {
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.filter-range {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.filter-input {
+  flex: 1;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.filter-checkbox-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4px;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.filter-btn {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.filter-reset {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+// Contact agent card
+.contact-agent-card {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+  h4 {
+    margin: 0 0 8px;
+  }
+}
+
+.contact-agent-description {
+  font-size: 13px;
+}
+
+.contact-agent-form {
+  margin-top: 12px;
+}
+
+.contact-agent-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #eef3fb;
+  margin-bottom: 8px;
+}
+
+.contact-agent-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+// Properties section
+.properties-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.properties-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.prop-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  background: white;
+}
+
+.prop-media {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.prop-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.prop-price {
+  font-weight: 700;
+}
+
+.prop-meta {
+  color: gray;
+  font-size: 13px;
+}
+
+.prop-description {
+  margin: 8px 0;
+  color: gray;
+  font-size: 13px;
+}
+
+.prop-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.prop-tag {
+  background: #f1f1f1;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.prop-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.prop-view-link {
+  flex: 1;
+  padding: 6px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+  color: black;
+}
+
+.prop-contact-btn {
+  flex: 1;
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+// Testimonials
+.testimonials {
+  padding: 40px 0;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.testimonials-subtitle {
+  color: gray;
+  font-size: 14px;
+}
+
+.testimonials-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  max-width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
 
