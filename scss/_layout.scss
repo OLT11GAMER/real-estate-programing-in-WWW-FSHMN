@@ -1,0 +1,75 @@
+// ====== Layout ======
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  
+  .logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--brand), #7dd3fc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  
+  .brand-name {
+    font-weight: 700;
+    font-size: 20px;
+    color: #0f172a;
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  
+  a {
+    color: #0f172a;
+    font-weight: 500;
+    transition: color 0.2s;
+    
+    &:hover {
+      color: var(--brand);
+    }
+  }
+}
+
+.signup-btn {
+  padding: 10px 20px;
+  background: var(--brand);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.main-content {
+  padding: 40px 0;
+}
+

@@ -3,15 +3,185 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Real Estate — Modern Template</title>
+    <title>RealEstra — Find Your Dream Home</title>
     <meta
       name="description"
-      content="Modern responsive real estate listing template."
+      content="Browse verified property listings. Find apartments, houses, and more in your area."
     />
-
-
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-   
+    <div class="container">
+      <header>
+        <div class="brand">
+          <div class="logo">RE</div>
+          <div class="brand-name">RealEstra</div>
+        </div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="pages/property-list.html">Property List</a>
+          <a href="pages/mortgage-calculator.html">Mortgage Calculator</a>
+          <a href="pages/contact.html">Contact</a>
+          <button class="signup-btn">Sign Up</button>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <!-- Search Section -->
+         <section class="search-section">
+          
+        </section>
+        <section class="search-section">
+          <div class="search-filters">
+            <div class="filter-group">
+              <label for="location">Location</label>
+              <input
+                type="text"
+                id="location"
+                placeholder="Enter city or neighborhood"
+              />
+            </div>
+            <div class="filter-group">
+              <label for="property-type">Property Type</label>
+              <select id="property-type">
+                <option value="">All Types</option>
+                <option value="apartment">Apartment</option>
+                <option value="house">House</option>
+                <option value="townhouse">Townhouse</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="price-range">Price Range</label>
+              <select id="price-range">
+                <option value="">Any Price</option>
+                <option value="0-500">€0 - €500</option>
+                <option value="500-1000">€500 - €1,000</option>
+                <option value="1000-2000">€1,000 - €2,000</option>
+                <option value="2000+">€2,000+</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="bedrooms">Bedrooms</label>
+              <select id="bedrooms">
+                <option value="">Any</option>
+                <option value="1">1+</option>
+                <option value="2">2+</option>
+                <option value="3">3+</option>
+                <option value="4">4+</option>
+              </select>
+            </div>
+            <button class="search-btn">Search</button>
+          </div>
+        </section>
+
+        <!-- Featured Property & Latest Properties -->
+        <div class="featured-section">
+          <div class="properties-section">
+            <h2>Latest in Your Area</h2>
+            <div class="properties-grid" id="properties-grid">
+              <!-- Properties will be loaded from database -->
+              <article class="property-card">
+                <img
+                  src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=400&q=80"
+                  alt="Modern Apartment"
+                  class="property-image"
+                />
+                <div class="property-body">
+                  <div class="property-header">
+                    <h3 class="property-title">Modern 2BR Apartment</h3>
+                    <div class="property-price">€1,350/mo</div>
+                  </div>
+                  <div class="property-location">Downtown District</div>
+                  <div class="property-features">
+                    <span class="feature-tag">2 Bed</span>
+                    <span class="feature-tag">1 Bath</span>
+                    <span class="feature-tag">85 m²</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="property-card">
+                <img
+                  src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=400&q=80"
+                  alt="Spacious Loft"
+                  class="property-image"
+                />
+                <div class="property-body">
+                  <div class="property-header">
+                    <h3 class="property-title">Spacious Loft</h3>
+                    <div class="property-price">€1,650/mo</div>
+                  </div>
+                  <div class="property-location">Arts District</div>
+                  <div class="property-features">
+                    <span class="feature-tag">1 Bed</span>
+                    <span class="feature-tag">1 Bath</span>
+                    <span class="feature-tag">65 m²</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="property-card">
+                <img
+                  src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=400&q=80"
+                  alt="Family Townhouse"
+                  class="property-image"
+                />
+                <div class="property-body">
+                  <div class="property-header">
+                    <h3 class="property-title">Family Townhouse</h3>
+                    <div class="property-price">€2,200/mo</div>
+                  </div>
+                  <div class="property-location">Suburban Area</div>
+                  <div class="property-features">
+                    <span class="feature-tag">3 Bed</span>
+                    <span class="feature-tag">2 Bath</span>
+                    <span class="feature-tag">120 m²</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="property-card">
+                <img
+                  src="https://images.unsplash.com/photo-1560184897-6e0a4ad3b8f8?auto=format&fit=crop&w=400&q=80"
+                  alt="Luxury Apartment"
+                  class="property-image"
+                />
+                <div class="property-body">
+                  <div class="property-header">
+                    <h3 class="property-title">Luxury Apartment</h3>
+                    <div class="property-price">€2,800/mo</div>
+                  </div>
+                  <div class="property-location">City Center</div>
+                  <div class="property-features">
+                    <span class="feature-tag">3 Bed</span>
+                    <span class="feature-tag">2 Bath</span>
+                    <span class="feature-tag">140 m²</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Featured Property Card -->
+          <aside class="featured-card">
+            <div class="featured-header">
+              <h3>Featured</h3>
+              <span class="updated">Updated: 2025-01-15</span>
+            </div>
+            <div class="featured-content">
+              <img
+                src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=200&q=80"
+                alt="Featured Property"
+              />
+              <div class="featured-info">
+                <div class="title">Modern Family Home</div>
+                <div class="meta">3 bd · 2 ba · 145 m²</div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
