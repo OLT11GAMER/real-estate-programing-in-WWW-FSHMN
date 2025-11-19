@@ -1,31 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Property List — RealEstra</title>
-    <link rel="stylesheet" href="../css/main.css" />
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <div class="brand">
-          <div class="logo">RE</div>
-          <div class="brand-name">RealEstra</div>
-        </div>
-        <nav>
-          <a href="../index.html">Home</a>
-          <a href="property-list.html">Property List</a>
-          <a href="mortgage-calculator.html">Mortgage Calculator</a>
-          <a href="contact.html">Contact</a>
-          <button class="signup-btn">Sign Up</button>
-        </nav>
-      </header>
 
-      <main class="main-content">
-        <!-- Property list content will go here -->
-      </main>
-    </div>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RealEstra — Property Listings</title>
+  <meta name="description"
+    content="Browse detailed property listings complete with filters, map preview, and curated results." />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">RE</div>
+        <div class="brand-name">RealEstra</div>
+      </div>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="property-list.html" aria-current="page">Property List</a>
+        <a href="mortgage-calculator.html">Mortgage Calculator</a>
+        <a href="contact.html">Contact</a>
+        <button class="signup-btn">Sign Up</button>
+      </nav>
+    </header>
+
+    <main class="main-content property-list-page">
+      <div class="layout-grid">
+        <aside class="filters filters-panel" aria-expanded="false">
+          <button class="filters-toggle" type="button" aria-expanded="false" data-label-show="Show Filters"
+            data-label-hide="Hide Filters">
+            <span class="filters-toggle-label">Show Filters</span>
+          </button>
+          <div class="filters-content">
+          <div class="filters-mode" role="group" aria-label="Purchase type">
+            <span class="mode-indicator" aria-hidden="true"></span>
+            <button type="button" class="mode-button is-active" aria-pressed="true" data-mode="buy">Buy</button>
+            <button type="button" class="mode-button" aria-pressed="false" data-mode="rent">Rent</button>
+            </div>
+
+            <div class="filters-summary">
+              <div>
+                <p class="results-count">256 results</p>
+                <p class="results-subtitle">Tailor the filters to refine your search.</p>
+              </div>
+              <label class="map-toggle">
+                <input type="checkbox" />
+                <span class="switch-track" aria-hidden="true">
+                  <span class="switch-thumb"></span>
+                </span>
+                <span class="map-toggle-label">Show on map</span>
+              </label>
+            </div>
+
+            <div class="filters-group">
+              <h4>Rental period</h4>
+              <label><input type="checkbox" checked /> Long term rent</label>
+              <label><input type="checkbox" /> Short term rent</label>
+            </div>
+
+            <div class="filters-group">
+              <h4>Price</h4>
+              <input type="range" min="200" max="2000" value="500" />
+              <div class="price-inputs">
+                <input type="text" value="$280" aria-label="Minimum price" />
+                <span class="range-divider">—</span>
+                <input type="text" value="$760" aria-label="Maximum price" />
+              </div>
+            </div>
+
+            <div class="filters-group">
+              <h4>Real estate type</h4>
+              <label><input type="checkbox" /> Houses</label>
+              <label><input type="checkbox" /> Condos</label>
+              <label><input type="checkbox" checked /> Apartments</label>
+              <label><input type="checkbox" /> Commercial</label>
+            </div>
+
+            <div class="filters-group">
+              <h4>Bedrooms</h4>
+              <div class="chip-group">
+                <label><input type="checkbox" /> 1</label>
+                <label><input type="checkbox" checked /> 2</label>
+                <label><input type="checkbox" /> 3</label>
+                <label><input type="checkbox" /> 4+</label>
+              </div>
+            </div>
+
+            <div class="filters-group">
+              <h4>Bathroom</h4>
+              <div class="btn-group">
+                <button type="button">Any</button>
+                <button type="button">Combined</button>
+                <button type="button">Separate</button>
+              </div>
+            </div>
+
+            <div class="filters-group">
+              <h4>View</h4>
+              <div class="btn-group">
+                <button type="button">Any</button>
+                <button type="button">Courtyard</button>
+                <button type="button">Street</button>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <section class="results-column" aria-live="polite">
+          <div class="map-hero" aria-label="Property map overview">
+            <div class="map-card" data-expanded="false">
+              <div class="map-frame">
+                <iframe title="Google Maps neighborhood preview" loading="lazy" allowfullscreen
+                  referrerpolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193571.43837395387!2d-74.11808638898963!3d40.7058254271186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250b5892c2b73%3A0x10b3114fbd0d93b4!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1732020685000!5m2!1sen!2sus"></iframe>
+              </div>
+              <button class="map-expand-btn" type="button" aria-expanded="false">
+                Expand Map
+              </button>
+            </div>
+          </div>
+
+          <div class="list-toolbar">
+            <div class="view-toggle" role="group" aria-label="Change view">
+              <button type="button" aria-pressed="true">▦</button>
+              <button type="button" aria-pressed="false">▤</button>
+            </div>
+            <div class="sort-control">
+              Sort by <button type="button" class="sort-select">Price ▾</button>
+            </div>
+          </div>
+
+          <div class="card-grid listing-grid">
+            <article class="property-card">
+              <div class="card-image">
+                <img src="../temp/house1.png" alt="Putuo, Daduhe Road property">
+              </div>
+              <div class="card-info">
+                <h3 class="title">$478 <span>/month</span></h3>
+                <p class="address">Putuo, Daduhe Road, No. 1618</p>
+                <div class="features">
+                  <span>2 rooms</span>
+                  <span>•</span>
+                  <span>1 bathroom</span>
+                  <span>•</span>
+                  <span>2nd floor</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="property-card">
+              <div class="card-image">
+                <img src="../temp/house2.png" alt="Lujiaibang Central Road property">
+              </div>
+              <div class="card-info">
+                <h3 class="title">$512 <span>/month</span></h3>
+                <p class="address">Lujiaibang Central Road, No. 1054</p>
+                <div class="features">
+                  <span>2 rooms</span>
+                  <span>•</span>
+                  <span>1 bathroom</span>
+                  <span>•</span>
+                  <span>5th floor</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="property-card">
+              <div class="card-image">
+                <img src="../temp/house4.png" alt="Ri Hui Er Cun property">
+              </div>
+              <div class="card-info">
+                <h3 class="title">$698 <span>/month</span></h3>
+                <p class="address">Ri Hui Er Cun, Xu Hui Qu Road, No. 74-75</p>
+                <div class="features">
+                  <span>3 rooms</span>
+                  <span>•</span>
+                  <span>2 bathroom</span>
+                  <span>•</span>
+                  <span>Garden view</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="property-card">
+              <div class="card-image">
+                <img src="../temp/house5.png" alt="Kensington Park property">
+              </div>
+              <div class="card-info">
+                <h3 class="title">$742 <span>/month</span></h3>
+                <p class="address">Kensington Park, Block C 12</p>
+                <div class="features">
+                  <span>2 rooms</span>
+                  <span>•</span>
+                  <span>1 bathroom</span>
+                  <span>•</span>
+                  <span>City skyline</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="../js/main.js"></script>
+</body>
+
 </html>
 

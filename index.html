@@ -1,184 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>RealEstra — Find Your Dream Home</title>
-    <meta
-      name="description"
-      content="Browse verified property listings. Find apartments, houses, and more in your area."
-    />
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <div class="brand">
-          <div class="logo">RE</div>
-          <div class="brand-name">RealEstra</div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RealEstra — Find Your Dream Home</title>
+  <meta name="description"
+    content="Browse verified property listings. Find apartments, temp/houses, and more in your area." />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">RE</div>
+        <div class="brand-name">RealEstra</div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="pages/property-list.html">Property List</a>
+        <a href="pages/mortgage-calculator.html">Mortgage Calculator</a>
+        <a href="pages/contact.html">Contact</a>
+        <button class="signup-btn">Sign Up</button>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <!-- Search Section -->
+      <section class="search-section">
+        <div class="search-filters">
+          <div class="filter-group">
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="Enter city or neighborhood" />
+          </div>
+          <div class="filter-group">
+            <label for="property-type">Property Type</label>
+            <select id="property-type">
+              <option value="">All Types</option>
+              <option value="apartment">Apartment</option>
+              <option value="house">House</option>
+              <option value="townhouse">Townhouse</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="price-range">Price Range</label>
+            <select id="price-range">
+              <option value="">Any Price</option>
+              <option value="0-500">€0 - €500</option>
+              <option value="500-1000">€500 - €1,000</option>
+              <option value="1000-2000">€1,000 - €2,000</option>
+              <option value="2000+">€2,000+</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="bedrooms">Bedrooms</label>
+            <select id="bedrooms">
+              <option value="">Any</option>
+              <option value="1">1+</option>
+              <option value="2">2+</option>
+              <option value="3">3+</option>
+              <option value="4">4+</option>
+            </select>
+          </div>
+          <button class="search-btn">Search</button>
         </div>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="pages/property-list.html">Property List</a>
-          <a href="pages/mortgage-calculator.html">Mortgage Calculator</a>
-          <a href="pages/contact.html">Contact</a>
-          <button class="signup-btn">Sign Up</button>
-        </nav>
-      </header>
+      </section>
 
-      <main class="main-content">
-        <!-- Search Section -->
-         <section class="search-section">
-          
-        </section>
-        <section class="search-section">
-          <div class="search-filters">
-            <div class="filter-group">
-              <label for="location">Location</label>
-              <input
-                type="text"
-                id="location"
-                placeholder="Enter city or neighborhood"
-              />
-            </div>
-            <div class="filter-group">
-              <label for="property-type">Property Type</label>
-              <select id="property-type">
-                <option value="">All Types</option>
-                <option value="apartment">Apartment</option>
-                <option value="house">House</option>
-                <option value="townhouse">Townhouse</option>
-              </select>
-            </div>
-            <div class="filter-group">
-              <label for="price-range">Price Range</label>
-              <select id="price-range">
-                <option value="">Any Price</option>
-                <option value="0-500">€0 - €500</option>
-                <option value="500-1000">€500 - €1,000</option>
-                <option value="1000-2000">€1,000 - €2,000</option>
-                <option value="2000+">€2,000+</option>
-              </select>
-            </div>
-            <div class="filter-group">
-              <label for="bedrooms">Bedrooms</label>
-              <select id="bedrooms">
-                <option value="">Any</option>
-                <option value="1">1+</option>
-                <option value="2">2+</option>
-                <option value="3">3+</option>
-                <option value="4">4+</option>
-              </select>
-            </div>
-            <button class="search-btn">Search</button>
+      <!-- Explore Premier Houses Section -->
+      <section class="properties-section">
+        <div class="section-header">
+          <div class="section-title-group">
+            <h2>Explore our premier houses</h2>
+            <p class="section-subtitle">
+              Each listing offers unique features, exceptional quality, and prime
+              locations, ensuring an exclusive living experience.
+            </p>
           </div>
-        </section>
+          <button class="see-all-btn">
+            See All Properties
+            <span class="arrow">→</span>
+          </button>
+        </div>
 
-        <!-- Featured Property & Latest Properties -->
-        <div class="featured-section">
-          <div class="properties-section">
-            <h2>Latest in Your Area</h2>
-            <div class="properties-grid" id="properties-grid">
-              <!-- Properties will be loaded from database -->
-              <article class="property-card">
-                <img
-                  src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=400&q=80"
-                  alt="Modern Apartment"
-                  class="property-image"
-                />
-                <div class="property-body">
-                  <div class="property-header">
-                    <h3 class="property-title">Modern 2BR Apartment</h3>
-                    <div class="property-price">€1,350/mo</div>
-                  </div>
-                  <div class="property-location">Downtown District</div>
-                  <div class="property-features">
-                    <span class="feature-tag">2 Bed</span>
-                    <span class="feature-tag">1 Bath</span>
-                    <span class="feature-tag">85 m²</span>
-                  </div>
-                </div>
-              </article>
-
-              <article class="property-card">
-                <img
-                  src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=400&q=80"
-                  alt="Spacious Loft"
-                  class="property-image"
-                />
-                <div class="property-body">
-                  <div class="property-header">
-                    <h3 class="property-title">Spacious Loft</h3>
-                    <div class="property-price">€1,650/mo</div>
-                  </div>
-                  <div class="property-location">Arts District</div>
-                  <div class="property-features">
-                    <span class="feature-tag">1 Bed</span>
-                    <span class="feature-tag">1 Bath</span>
-                    <span class="feature-tag">65 m²</span>
-                  </div>
-                </div>
-              </article>
-
-              <article class="property-card">
-                <img
-                  src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=400&q=80"
-                  alt="Family Townhouse"
-                  class="property-image"
-                />
-                <div class="property-body">
-                  <div class="property-header">
-                    <h3 class="property-title">Family Townhouse</h3>
-                    <div class="property-price">€2,200/mo</div>
-                  </div>
-                  <div class="property-location">Suburban Area</div>
-                  <div class="property-features">
-                    <span class="feature-tag">3 Bed</span>
-                    <span class="feature-tag">2 Bath</span>
-                    <span class="feature-tag">120 m²</span>
-                  </div>
-                </div>
-              </article>
-
-              <article class="property-card">
-                <img
-                  src="https://images.unsplash.com/photo-1560184897-6e0a4ad3b8f8?auto=format&fit=crop&w=400&q=80"
-                  alt="Luxury Apartment"
-                  class="property-image"
-                />
-                <div class="property-body">
-                  <div class="property-header">
-                    <h3 class="property-title">Luxury Apartment</h3>
-                    <div class="property-price">€2,800/mo</div>
-                  </div>
-                  <div class="property-location">City Center</div>
-                  <div class="property-features">
-                    <span class="feature-tag">3 Bed</span>
-                    <span class="feature-tag">2 Bath</span>
-                    <span class="feature-tag">140 m²</span>
-                  </div>
-                </div>
-              </article>
+        <div class="card-grid">
+          <article class="property-card">
+            <div class="card-image">
+              <span class="badge exo-2-regular">For Sale</span>
+              <img src="temp/house1.png" alt="The Pinnacle at Highland Park">
             </div>
-          </div>
-
-          <!-- Featured Property Card -->
-          <aside class="featured-card">
-            <div class="featured-header">
-              <h3>Featured</h3>
-              <span class="updated">Updated: 2025-01-15</span>
-            </div>
-            <div class="featured-content">
-              <img
-                src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=200&q=80"
-                alt="Featured Property"
-              />
-              <div class="featured-info">
-                <div class="title">Modern Family Home</div>
-                <div class="meta">3 bd · 2 ba · 145 m²</div>
+            <div class="card-info">
+              <h3 class="title exo-2-regular">The Pinnacle at Highland Park</h3>
+              <div class="price exo-2-regular">$3,56798.00</div>
+              <div class="features exo-2-regular">
+                <span>🛏️ 5 Bedrooms</span>
+                <span>•</span>
+                <span>🛁 2 Bathroom</span>
               </div>
+              <div class="address">123 Maple Street, New York</div>
             </div>
-          </aside>
+          </article>
+
+          <article class="property-card">
+            <div class="card-image">
+              <span class="badge">For Sale</span>
+              <img src="temp/house2.png" alt="The Pinnacle at Highland Park">
+            </div>
+            <div class="card-info">
+              <h3 class="title">The Pinnacle at Highland Park</h3>
+              <div class="price">$2,49089.99</div>
+              <div class="features">
+                <span>🛏️ 5 Bedrooms</span>
+                <span>•</span>
+                <span>🛁 2 Bathroom</span>
+              </div>
+              <div class="address">789 Forest Lane, Denver, CO</div>
+            </div>
+          </article>
+
+          <article class="property-card">
+            <div class="card-image">
+              <span class="badge">For Sale</span>
+              <img src="temp/house3.png" alt="The Pinnacle at Highland Park">
+            </div>
+            <div class="card-info">
+              <h3 class="title">The Pinnacle at Highland Park</h3>
+              <div class="price">$4,56745.00</div>
+              <div class="features">
+                <span>🛏️ 5 Bedrooms</span>
+                <span>•</span>
+                <span>🛁 2 Bathroom</span>
+              </div>
+              <div class="address">123 Serenity Drive, Austin, TX</div>
+            </div>
+          </article>
+
+          <article class="property-card">
+            <div class="card-image">
+              <span class="badge">For Sale</span>
+              <img src="temp/house4.png" alt="The Pinnacle at Highland Park">
+            </div>
+            <div class="card-info">
+              <h3 class="title">The Pinnacle at Highland Park</h3>
+              <div class="price">$3,56798.00</div>
+              <div class="features">
+                <span>🛏️ 5 Bedrooms</span>
+                <span>•</span>
+                <span>🛁 2 Bathroom</span>
+              </div>
+              <div class="address">123 Maple Street, New York</div>
+            </div>
+          </article>
+
+          <article class="property-card">
+            <div class="card-image">
+              <span class="badge">For Sale</span>
+              <img src="temp/house5.png" alt="The Pinnacle at Highland Park">
+            </div>
+            <div class="card-info">
+              <h3 class="title">The Pinnacle at Highland Park</h3>
+              <div class="price">$2,49089.99</div>
+              <div class="features">
+                <span>🛏️ 5 Bedrooms</span>
+                <span>•</span>
+                <span>🛁 2 Bathroom</span>
+              </div>
+              <div class="address">789 Forest Lane, Denver, CO</div>
+            </div>
+          </article>
+
+          <article class="property-card">
+            <div class="card-image">
+              <span class="badge">For Sale</span>
+              <img src="temp/house6.png" alt="The Pinnacle at Highland Park">
+            </div>
+            <div class="card-info">
+              <h3 class="title">The Pinnacle at Highland Park</h3>
+              <div class="price">$4,56745.00</div>
+              <div class="features">
+                <span>🛏️ 5 Bedrooms</span>
+                <span>•</span>
+                <span>🛁 2 Bathroom</span>
+              </div>
+              <div class="address">123 Serenity Drive, Austin, TX</div>
+            </div>
+          </article>
         </div>
        <!-- Bottom Image Section -->
         <section class="bottom-hero">
