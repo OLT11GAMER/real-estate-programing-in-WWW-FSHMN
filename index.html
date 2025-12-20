@@ -1,64 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RealEstra — Find Your Dream Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RealEstra — Find Your Dream Home</title>
-  <meta name="description"
-    content="Browse verified property listings. Find apartments, temp/houses, and more in your area." />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
+  </head>
 
-<body class="">
+  <body class="">
     <header class="header" id="header">
-        <nav class="nav container">
-            <a href="" class="nav__logo">H&SH<i class='bx bxs-buildings'></i></a>
+      <nav class="nav container">
+        <a href="" class="nav__logo">H&SH<i class="bx bxs-buildings"></i></a>
 
-            <div class="nav__menu">
-                <ul class="nav__list">
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="bx bx-home-alt-2"></i>
+                <span>Home</span>
+              </a>
+            </li>
 
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
-                            <i class='bx bx-home-alt-2'></i>
-                            <span>Home</span>
-                        </a>
-                    </li>
+            <li class="nav__item">
+              <a href="#popular" class="nav__link">
+                <i class="bx bx-building-house"></i>
+                <span>Residences</span>
+              </a>
+            </li>
 
-                    <li class="nav__item">
-                        <a href="#popular" class="nav__link">
-                            <i class='bx bx-building-house'></i>
-                            <span>Residences</span>
-                        </a>
-                    </li>
+            <li class="nav__item">
+              <a href="#value" class="nav__link">
+                <i class="bx bx-award"></i>
+                <span>Value</span>
+              </a>
+            </li>
 
-                    <li class="nav__item">
-                        <a href="#value" class="nav__link">
-                            <i class='bx bx-award'></i>
-                            <span>Value</span>
-                        </a>
-                    </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">
+                <i class="bx bx-phone"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">
-                            <i class='bx bx-phone'></i>
-                            <span>Contact</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <i class="bx bx-moon change-theme" id="theme-button"></i>
-
-        </nav>
-
+        <i class="bx bx-moon change-theme" id="theme-button"></i>
+      </nav>
     </header>
 
- 
-    <main class="main-content">
+    <main class="main">
+        <!-- home section -->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home_data">
+                    <h1 class="home__title">
+                        Discover Most Suitable Properties
+                    </h1>
+                    <p class="home__description">
+                        Find a variety of properties that suit you very easily, forget all difficulties in finding a
+                        residence for you
+                    </p>
+
+                    <form action="" class="home__search">
+                        <i class='bx bx-map'></i>
+                        <input type="search" placeholder="Search locations..." class="home__search-input">
+                        <button class="button popup-enabled">Search</button>
+                    </form>
+
+                    <div class="home__value">
+                        <div>
+                            <h1 class="home__value-number">
+                                9K<span>+</span>
+                            </h1>
+                            <span class="home__value-description">
+                                Premium <br> Product
+                            </span>
+                        </div>
+
+                        <div>
+                            <h1 class="home__value-number">
+                                2K<span>+</span>
+                            </h1>
+                            <span class="home__value-description">
+                                Happy <br> Customer
+                            </span>
+                        </div>
+
+                        <div>
+                            <h1 class="home__value-number">
+                                28K<span>+</span>
+                            </h1>
+                            <span class="home__value-description">
+                                Awards <br> Winning
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home__images">
+                    <div class="home__orbe"></div>
+                    <div class="home__img">
+                        <img src="assets/img/home.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+          </body>
+</html>
+
+    <!-- <main class="main-content">
       <section class="properties-section">
         <div class="section-header">
           <div class="section-title-group">
@@ -109,22 +160,7 @@
             </div>
           </article>
 
-          <article class="property-card">
-            <div class="card-image">
-              <span class="badge">For Sale</span>
-              <img src="temp/house3.png" alt="The Pinnacle at Highland Park">
-            </div>
-            <div class="card-info">
-              <h3 class="title">The Pinnacle at Highland Park</h3>
-              <div class="price">$4,56745.00</div>
-              <div class="features">
-                <span>🛏️ 5 Bedrooms</span>
-                <span>•</span>
-                <span>🛁 2 Bathroom</span>
-              </div>
-              <div class="address">123 Serenity Drive, Austin, TX</div>
-            </div>
-          </article>
+          
 
           <article class="property-card">
             <div class="card-image">
@@ -179,7 +215,7 @@
         </div>
        
       </section>
-      <!-- Bottom Image Section -->
+      Bottom Image Section
         <section class="bottom-hero">
           <img
             src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80"
@@ -214,8 +250,8 @@
               <a href="pages/mortgage-calculator.html">Mortgage Calculator</a>
               <a href="pages/contact.html">Contact</a>
             </div>
-           <!-- FOOTER NAVIGATION BAR -->
-    
+            FOOTER NAVIGATION BAR -->
+    <!--     
             <div class="mid-brand">RealEstra</div>
     
             <div class="mid-right">
@@ -227,8 +263,8 @@
           </div>
         </nav>
     
-        <!-- BOTTOM FOOTER -->
-        <footer class="site-footer">
+     BOTTOM FOOTER -->
+    <!-- <footer class="site-footer">
           <div class="footer-inner">
             <div class="copy">© 2025 RealEstra. All rights reserved.</div>
     
@@ -241,7 +277,4 @@
       
       </main>
     </div>
-    <script src="js/main.js"></script>
-
-  </body>
-</html>
+    <script src="js/main.js"></script>  -->
