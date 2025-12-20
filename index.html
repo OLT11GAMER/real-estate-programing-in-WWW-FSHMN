@@ -13,94 +13,52 @@
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <!-- Fixed Header -->
-    <div class="site-header">
-      <div class="site-header__inner">
-        <div class="logo">RealEstra</div>
-        <nav class="main-nav">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="pages/property-list.html" class="nav-link">About Us</a>
-          <a href="pages/mortgage-calculator.html" class="nav-link">Property List</a>
-          <a href="pages/contact.html" class="nav-link">Contact Us</a>
-        </nav>
-        <div class="header-actions">
-          <button class="lang" title="English">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-            <span>Eng</span>
-          </button>
-          <a href="#" class="btn-signup">Sign Up</a>
-        </div>
-      </div>
-    </div>
+<body class="">
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="" class="nav__logo">H&SH<i class='bx bxs-buildings'></i></a>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <!-- Hero Text Overlays -->
-      <div class="hero-text-overlay">
-        <h1 class="hero-main-title">Build Your Future, One Property at a Time.</h1>
-        <p class="hero-subtitle">Own Your World. One Property at a Time. Own Your World, One Property at a Time. Own Your World One Property at a Time.</p>
-      </div>
-      
-      <!-- Search Card -->
-      <div class="hero__content">
-        <div class="search-card">
-          <h2 class="search-card-title">Find the best place</h2>
-          <div class="search-card-content">
-            <div class="search-row">
-              <div class="field">
-                <label for="search-type">Looking for</label>
-                <input type="text" id="search-type" placeholder="Enter type" />
-              </div>
-              <div class="field">
-                <label for="search-price">Price</label>
-                <select id="search-price">
-                  <option value="">Price</option>
-                  <option value="0-500">€0 - €500</option>
-                  <option value="500-1000">€500 - €1,000</option>
-                  <option value="1000-2000">€1,000 - €2,000</option>
-                  <option value="2000+">€2,000+</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="search-location">Locations</label>
-                <select id="search-location">
-                  <option value="">Location</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="search-beds">Number of rooms</label>
-                <select id="search-beds">
-                  <option value="">2 Bed rooms</option>
-                  <option value="1">1+</option>
-                  <option value="2">2+</option>
-                  <option value="3">3+</option>
-                  <option value="4">4+</option>
-                </select>
-              </div>
-              <div class="field actions">
-                <button type="submit" class="search-button">Search Properties</button>
-              </div>
+            <div class="nav__menu">
+                <ul class="nav__list">
+
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class='bx bx-home-alt-2'></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#popular" class="nav__link">
+                            <i class='bx bx-building-house'></i>
+                            <span>Residences</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#value" class="nav__link">
+                            <i class='bx bx-award'></i>
+                            <span>Value</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class='bx bx-phone'></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="filter-row">
-              <span>Filter:</span>
-              <button type="button" class="pill">City</button>
-              <button type="button" class="pill">House</button>
-              <button type="button" class="pill">Residential</button>
-              <button type="button" class="pill">Apartment</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
+            <i class="bx bx-moon change-theme" id="theme-button"></i>
+
+        </nav>
+
+    </header>
 
  
     <main class="main-content">
-      <!-- Explore Premier Houses Section -->
       <section class="properties-section">
         <div class="section-header">
           <div class="section-title-group">
