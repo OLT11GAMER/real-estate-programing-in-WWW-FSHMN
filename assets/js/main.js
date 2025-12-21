@@ -117,11 +117,5 @@ if (selectedTheme) {
 
 themeButton.addEventListener('click', toggleTheme);
 
-document.querySelectorAll('.popup-enabled').forEach((element)=>{
-    element.addEventListener('click', (event)=>{
-        event.preventDefault();
-        console.log(event.target);
-        alert('Buttons and links aren\'t functional.' + event.target)
-    })
-})
+
 
