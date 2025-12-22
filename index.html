@@ -611,11 +611,18 @@
             <div class="media__compact-row">
               <!-- Video element with fallback - horizontal -->
               <div class="media__video-compact">
-                <h3>Tur Virtual</h3>
-                <video controls poster="assets/video/tour-thumbnail.png">
-                    
+              <h3>Tur Virtual</h3>
+              <video controls poster="assets/video/tour-thumbnail.png">
+                  
                   <source src="assets/video/tour.mp4" type="video/mp4" />
                   <source src="assets/video/tour.webm" type="video/webm" />
+                  <track
+                    src="assets/video/tour-subtitles.vtt"
+                    kind="subtitles"
+                    srclang="en"
+                    label="English"
+                    default
+                  />
                   <p>Shfletuesi juaj nuk mbështet elementin video ose skedari video nuk është i disponueshëm.</p>
                 </video>
               </div>
