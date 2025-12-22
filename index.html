@@ -76,40 +76,47 @@
               të gjitha vështirësitë në gjetjen e rezidencës suaj të ëndrrave.
             </p>
 
-            <form action="" class="home__search">
+            <form action="#" method="get" class="home__search">
               <i class="bx bx-map"></i>
+              <label for="location-search" class="sr-only">Kërko lokacionin</label>
               <input
                 type="search"
+                id="location-search"
+                name="location"
                 placeholder="Kërko lokacionin..."
                 class="home__search-input"
+                required
+                maxlength="100"
               />
-              <button class="button popup-enabled">Kërko</button>
+              <button type="submit" class="button popup-enabled">Kërko</button>
             </form>
 
             <div class="home__value">
-              <div>
-                <h1 class="home__value-number">9K<span>+</span></h1>
-                <span class="home__value-description">
-                  Prona <br />
-                  Premium
-                </span>
-              </div>
+              <ol class="home__value-list">
+                <li>
+                  <h1 class="home__value-number">9K<span>+</span></h1>
+                  <span class="home__value-description">
+                    Prona <br />
+                    Premium
+                  </span>
+                </li>
 
-              <div>
-                <h1 class="home__value-number">2K<span>+</span></h1>
-                <span class="home__value-description">
-                  Klientë <br />
-                  të Lumtur
-                </span>
-              </div>
+                <li>
+                  <h1 class="home__value-number">2K<span>+</span></h1>
+                  <span class="home__value-description">
+                    Klientë <br />
+                    të Lumtur
+                  </span>
+                </li>
 
-              <div>
-                <h1 class="home__value-number">28K<span>+</span></h1>
-                <span class="home__value-description">
-                  Çmime <br />
-                  Fituese
-                </span>
-              </div>
+                <li>
+                  <h1 class="home__value-number">28K<span>+</span></h1>
+                  <span class="home__value-description">
+                    Çmime <br />
+                    Fituese
+                  </span>
+                </li>
+              </ol>
             </div>
           </div>
 
@@ -122,6 +129,15 @@
         </div>
       </section>
 
+      <!-- React Component Section - Interactive Property Filter -->
+      <section class="react-filter section" id="react-filter">
+        <div class="container">
+          <span class="section__subtitle">Kërkim i Avancuar</span>
+          <h2 class="section__title">Filtro Pronat <span>me React.</span></h2>
+          <div id="react-property-filter"></div>
+        </div>
+      </section>
+
       <section class="popular section" id="popular">
         <div class="container">
           <span class="section__subtitle">Zgjedhjet më të mira</span>
@@ -129,11 +145,14 @@
           <div class="popular__container swiper">
             <div class="swiper-wrapper">
               <article class="popular__card swiper-slide">
-                <img
-                  class="popular__img"
-                  src="assets/img/popular1.jpg"
-                  alt=""
-                />
+                <figure>
+                  <img
+                    class="popular__img"
+                    src="assets/img/popular1.jpg"
+                    alt="Rezidenca Arbëria - Apartament modern në Prishtinë"
+                  />
+                  <figcaption>Rezidenca Arbëria - Vila moderne</figcaption>
+                </figure>
                 <div class="popular__data">
                   <h2 class="popular__price"><span>€</span>69,000.0</h2>
                   <h3 class="popular__title">Rezidenca Arbëria</h3>
@@ -145,11 +164,14 @@
               </article>
 
               <article class="popular__card swiper-slide">
-                <img
-                  class="popular__img"
-                  src="assets/img/popular2.jpg"
-                  alt=""
-                />
+                <figure>
+                  <img
+                    class="popular__img"
+                    src="assets/img/popular2.jpg"
+                    alt="Kompleksi i Ri - Emshir - Apartament i ri në qendër të Prishtinës"
+                  />
+                  <figcaption>Kompleksi i Ri - Emshir</figcaption>
+                </figure>
                 <div class="popular__data">
                   <h2 class="popular__price"><span>€</span>85,000.0</h2>
                   <h3 class="popular__title">Kompleksi i Ri - Emshir</h3>
@@ -161,11 +183,14 @@
               </article>
 
               <article class="popular__card swiper-slide">
-                <img
-                  class="popular__img"
-                  src="assets/img/popular3.jpg"
-                  alt=""
-                />
+                <figure>
+                  <img
+                    class="popular__img"
+                    src="assets/img/popular3.jpg"
+                    alt="Bregu i Diellit - Vila luksoze me pamje në Prishtinë"
+                  />
+                  <figcaption>Bregu i Diellit - Vila premium</figcaption>
+                </figure>
                 <div class="popular__data">
                   <h2 class="popular__price"><span>€</span>120,000.0</h2>
                   <h3 class="popular__title">Bregu i Diellit</h3>
@@ -187,6 +212,61 @@
         </div>
       </section>
 
+      <!-- Pricing Table Section - Demonstrates HTML table structure -->
+      <section class="pricing-table section" id="pricing">
+        <div class="container">
+          <span class="section__subtitle">Çmimet</span>
+          <h2 class="section__title">Tabela e <span>Çmimeve.</span></h2>
+          <table class="pricing-table__table">
+            <caption>Krahasimi i çmimeve për lloje të ndryshme pronash</caption>
+            <thead>
+              <tr>
+                <th>Lloji i Pronës</th>
+                <th>Çmimi Minimal (€)</th>
+                <th>Çmimi Mesatar (€)</th>
+                <th>Çmimi Maksimal (€)</th>
+                <th>Disponueshmëria</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Apartament 1+1</td>
+                <td>45,000</td>
+                <td>65,000</td>
+                <td>85,000</td>
+                <td>E lartë</td>
+              </tr>
+              <tr>
+                <td>Apartament 2+1</td>
+                <td>65,000</td>
+                <td>95,000</td>
+                <td>125,000</td>
+                <td>E mesme</td>
+              </tr>
+              <tr>
+                <td>Vila</td>
+                <td>120,000</td>
+                <td>180,000</td>
+                <td>250,000</td>
+                <td>E ulët</td>
+              </tr>
+              <tr>
+                <td>Shtëpi me oborr</td>
+                <td>100,000</td>
+                <td>150,000</td>
+                <td>220,000</td>
+                <td>E mesme</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5"><em>Të gjitha çmimet janë në Euro dhe mund të ndryshojnë sipas lokacionit.</em></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
       <section class="value section" id="value">
         <div class="value__container container grid">
           <div class="value__images">
@@ -204,8 +284,8 @@
                 Vlera që ne ju ofrojmë <span>juve.</span>
               </h2>
               <p class="value__description">
-                Ne jemi të përkushtuar të ofrojmë shërbimin më të mirë në treg,
-                duke siguruar që çdo investim i juaj të jetë i sigurt dhe i
+                Ne jemi <strong>të përkushtuar</strong> të ofrojmë shërbimin më të mirë në treg,
+                duke siguruar që çdo investim i juaj të jetë <em>i sigurt</em> dhe i
                 vlefshëm për të ardhmen.
               </p>
             </div>
@@ -342,6 +422,7 @@
                   class="contact__card-button popup-enabled"
                   onclick="window.open('https://www.google.com/maps/place/The+Faculty+of+Mathematics+and+Natural+Sciences/@42.6554946,21.1609659,16.78z/data=!4m10!1m2!2m1!1sfshmn+location!3m6!1s0x13549ee896b552d7:0x31bf5e925cb705a3!8m2!3d42.6555491!4d21.1613269!15sCg5mc2htbiBsb2NhdGlvbpIBFXVuaXZlcnNpdHlfZGVwYXJ0bWVudOABAA!16s%2Fg%2F1hdyyllp2?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D','_blank');"
                   aria-label="Open location in Google Maps (new tab)"
+                  rel="noopener noreferrer"
                 >
                   Hap Hartën
                 </button>
@@ -361,6 +442,220 @@
                 >
                   Fillo Chat
                 </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Enhanced Contact Form Section with various input types -->
+      <section class="contact-form section" id="contact-form">
+        <div class="container">
+          <span class="section__subtitle">Kontaktoni</span>
+          <h2 class="section__title">Dërgoni <span>Mesazh.</span></h2>
+          <form action="#" method="post" class="contact-form__form" id="contactForm">
+            <fieldset>
+              <legend>Informacioni Personal</legend>
+              <div class="form-group">
+                <label for="fullname">Emri i Plotë <strong>*</strong></label>
+                <input
+                  type="text"
+                  id="fullname"
+                  name="fullname"
+                  required
+                  minlength="3"
+                  maxlength="50"
+                  pattern="[A-Za-z\s]+"
+                  placeholder="Shkruani emrin tuaj të plotë"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email <strong>*</strong></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="example@email.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Telefoni</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  pattern="[0-9+\s-]+"
+                  placeholder="+383 45 123 456"
+                />
+              </div>
+              <div class="form-group">
+                <label for="birthdate">Data e Lindjes</label>
+                <input
+                  type="date"
+                  id="birthdate"
+                  name="birthdate"
+                  min="1920-01-01"
+                  max="2010-12-31"
+                />
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Informacioni për Pronën</legend>
+              <div class="form-group">
+                <label for="property-type">Lloji i Pronës <strong>*</strong></label>
+                <select id="property-type" name="property-type" required>
+                  <optgroup label="Rezidenciale">
+                    <option value="">Zgjidhni...</option>
+                    <option value="apartment-1">Apartament 1+1</option>
+                    <option value="apartment-2">Apartament 2+1</option>
+                    <option value="apartment-3">Apartament 3+1</option>
+                    <option value="villa">Vila</option>
+                    <option value="house">Shtëpi me oborr</option>
+                  </optgroup>
+                  <optgroup label="Komerciale">
+                    <option value="office">Zyra</option>
+                    <option value="shop">Dyqan</option>
+                    <option value="warehouse">Magazinë</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="budget">Buxheti (€)</label>
+                <input
+                  type="number"
+                  id="budget"
+                  name="budget"
+                  min="10000"
+                  max="1000000"
+                  step="1000"
+                  placeholder="50000"
+                />
+              </div>
+              <div class="form-group">
+                <label>
+                  <input type="checkbox" name="features" value="parking" />
+                  Parking
+                </label>
+                <label>
+                  <input type="checkbox" name="features" value="elevator" />
+                  Ashensor
+                </label>
+                <label>
+                  <input type="checkbox" name="features" value="balcony" />
+                  Ballkon
+                </label>
+              </div>
+              <div class="form-group">
+                <label>Gjendja e Pronës:</label>
+                <label>
+                  <input type="radio" name="condition" value="new" required />
+                  E re
+                </label>
+                <label>
+                  <input type="radio" name="condition" value="renovated" required />
+                  E renovuar
+                </label>
+                <label>
+                  <input type="radio" name="condition" value="needs-renovation" required />
+                  Nevojitet renovim
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Mesazhi</legend>
+              <div class="form-group">
+                <label for="message">Mesazhi juaj <strong>*</strong></label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  minlength="10"
+                  maxlength="500"
+                  placeholder="Shkruani mesazhin tuaj këtu..."
+                ></textarea>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="button">Dërgo Mesazhin</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Media Section: Compact layout with 3D view -->
+      <section class="media section" id="media">
+        <div class="container">
+          <span class="section__subtitle">Media</span>
+          <h2 class="section__title">Multimedia <span>Përmbajtje.</span></h2>
+          
+          <div class="media__content">
+            <!-- 3D Rotating View of Residence with FBX Model -->
+            <div class="media__3d-view">
+              <h3>Pamje 3D e Rezidencës</h3>
+              <div class="view-3d-container">
+                <canvas id="threejs-canvas"></canvas>
+                <div id="loading-indicator" class="loading-indicator">
+                  <p>Duke ngarkuar modelin 3D...</p>
+                </div>
+                <div id="error-message" class="error-message" style="display: none;">
+                  <p>Gabim në ngarkimin e modelit. Po shfaqet pamje alternative.</p>
+                </div>
+              </div>
+              <p class="view-3d-hint">Klikoni dhe tërhiqni për të rrotulluar | Scroll për zoom</p>
+            </div>
+
+            <!-- Compact horizontal layout for video and map -->
+            <div class="media__compact-row">
+              <!-- Video element with fallback - horizontal -->
+              <div class="media__video-compact">
+                <h3>Tur Virtual</h3>
+                <video controls poster="assets/video/tour-thumbnail.png">
+                    
+                  <source src="assets/video/tour.mp4" type="video/mp4" />
+                  <source src="assets/video/tour.webm" type="video/webm" />
+                  <p>Shfletuesi juaj nuk mbështet elementin video ose skedari video nuk është i disponueshëm.</p>
+                </video>
+              </div>
+
+              <!-- iframe for external content (Google Maps) - compact -->
+              <div class="media__map-compact">
+                <h3>Harta</h3>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.789123456789!2d21.1613269!3d42.6555491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ee896b552d7%3A0x31bf5e925cb705a3!2sFaculty%20of%20Mathematics%20and%20Natural%20Sciences!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Harta e lokacionit të zyrës"
+                ></iframe>
+              </div>
+            </div>
+
+            <!-- Audio and YouTube in compact row -->
+            <div class="media__compact-row">
+              <!-- Audio element with fallback -->
+              <div class="media__audio-compact">
+                <h3>Audio Informacion</h3>
+                <audio controls>
+                  <source src="assets/audio/info.mp3" type="audio/mpeg" />
+                  <source src="assets/audio/info.ogg" type="audio/ogg" />
+                  <p>Shfletuesi juaj nuk mbështet elementin audio. <a href="assets/audio/info.mp3">Shkarkoni skedarin audio</a>.</p>
+                </audio>
+              </div>
+
+              <!-- iframe for YouTube video - compact -->
+              <div class="media__youtube-compact">
+                <h3>Video YouTube</h3>
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Video për Real Estate"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
           </div>
@@ -447,24 +742,28 @@
             href="https://fshmn.uni-pr.edu/"
             class="footer__social-link popup-enabled"
             target="_blank"
+            rel="noopener noreferrer"
             ><i class="bx bxl-twitter"></i
           ></a>
           <a
             href="https://fshmn.uni-pr.edu/"
             class="footer__social-link popup-enabled"
             target="_blank"
+            rel="noopener noreferrer"
             ><i class="bx bxl-facebook-circle"></i
           ></a>
           <a
             href="https://fshmn.uni-pr.edu/"
             class="footer__social-link popup-enabled"
             target="_blank"
+            rel="noopener noreferrer"
             ><i class="bx bxl-pinterest"></i
           ></a>
           <a
             href="https://fshmn.uni-pr.edu/"
             class="footer__social-link popup-enabled"
             target="_blank"
+            rel="noopener noreferrer"
             ><i class="bx bxl-instagram-alt"></i
           ></a>
         </ul>
@@ -487,8 +786,25 @@
       <i class="bx bxs-chevrons-up"></i>
     </a>
 
+    <!-- React and ReactDOM from CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- Babel Standalone for JSX transformation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Three.js and Loaders for 3D model rendering -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Load Three.js loaders from jsDelivr (more reliable) -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/MTLLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/FBXLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/libs/inflate.min.js"></script>
+    
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/threejs-model.js"></script>
+    <!-- React Component - Load after React libraries -->
+    <script type="text/babel" src="assets/js/react-components.js"></script>
   </body>
 </html>
