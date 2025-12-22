@@ -1326,6 +1326,10 @@ nav {
 .pricing-table__table tbody tr:nth-child(even) {
   background-color: var(--body-color);
 }
+.pricing-table__table tbody tr:nth-child(even):hover {
+  background-color: var(--first-color-lighten);
+}
+
 
 .pricing-table__table tfoot {
   background-color: var(--first-color-lighten);
