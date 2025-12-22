@@ -78,7 +78,9 @@
 
             <form action="#" method="get" class="home__search">
               <i class="bx bx-map"></i>
-              <label for="location-search" class="sr-only">Kërko lokacionin</label>
+              <label for="location-search" class="sr-only"
+                >Kërko lokacionin</label
+              >
               <input
                 type="search"
                 id="location-search"
@@ -133,7 +135,9 @@
       <section class="react-filter section" id="react-filter">
         <div class="container">
           <span class="section__subtitle">Kërkim i Avancuar</span>
-          <h2 class="section__title">Filtro Pronat <span>me React.</span></h2>
+          <h2 class="section__title">
+            Filtro pronat <span>sipas preferenacve.</span>
+          </h2>
           <div id="react-property-filter"></div>
         </div>
       </section>
@@ -218,7 +222,9 @@
           <span class="section__subtitle">Çmimet</span>
           <h2 class="section__title">Tabela e <span>Çmimeve.</span></h2>
           <table class="pricing-table__table">
-            <caption>Krahasimi i çmimeve për lloje të ndryshme pronash</caption>
+            <caption>
+              Krahasimi i çmimeve për lloje të ndryshme pronash
+            </caption>
             <thead>
               <tr>
                 <th>Lloji i Pronës</th>
@@ -260,7 +266,12 @@
             </tbody>
             <tfoot>
               <tr>
-                <td colspan="5"><em>Të gjitha çmimet janë në Euro dhe mund të ndryshojnë sipas lokacionit.</em></td>
+                <td colspan="5">
+                  <em
+                    >Të gjitha çmimet janë në Euro dhe mund të ndryshojnë sipas
+                    lokacionit.</em
+                  >
+                </td>
               </tr>
             </tfoot>
           </table>
@@ -284,9 +295,9 @@
                 Vlera që ne ju ofrojmë <span>juve.</span>
               </h2>
               <p class="value__description">
-                Ne jemi <strong>të përkushtuar</strong> të ofrojmë shërbimin më të mirë në treg,
-                duke siguruar që çdo investim i juaj të jetë <em>i sigurt</em> dhe i
-                vlefshëm për të ardhmen.
+                Ne jemi <strong>të përkushtuar</strong> të ofrojmë shërbimin më
+                të mirë në treg, duke siguruar që çdo investim i juaj të jetë
+                <em>i sigurt</em> dhe i vlefshëm për të ardhmen.
               </p>
             </div>
 
@@ -453,7 +464,12 @@
         <div class="container">
           <span class="section__subtitle">Kontaktoni</span>
           <h2 class="section__title">Dërgoni <span>Mesazh.</span></h2>
-          <form action="#" method="post" class="contact-form__form" id="contactForm">
+          <form
+            action="#"
+            method="post"
+            class="contact-form__form"
+            id="contactForm"
+          >
             <fieldset>
               <legend>Informacioni Personal</legend>
               <div class="form-group">
@@ -504,7 +520,9 @@
             <fieldset>
               <legend>Informacioni për Pronën</legend>
               <div class="form-group">
-                <label for="property-type">Lloji i Pronës <strong>*</strong></label>
+                <label for="property-type"
+                  >Lloji i Pronës <strong>*</strong></label
+                >
                 <select id="property-type" name="property-type" required>
                   <optgroup label="Rezidenciale">
                     <option value="">Zgjidhni...</option>
@@ -554,11 +572,21 @@
                   E re
                 </label>
                 <label>
-                  <input type="radio" name="condition" value="renovated" required />
+                  <input
+                    type="radio"
+                    name="condition"
+                    value="renovated"
+                    required
+                  />
                   E renovuar
                 </label>
                 <label>
-                  <input type="radio" name="condition" value="needs-renovation" required />
+                  <input
+                    type="radio"
+                    name="condition"
+                    value="needs-renovation"
+                    required
+                  />
                   Nevojitet renovim
                 </label>
               </div>
@@ -589,8 +617,8 @@
       <section class="media section" id="media">
         <div class="container">
           <span class="section__subtitle">Media</span>
-          <h2 class="section__title">Multimedia <span>Përmbajtje.</span></h2>
-          
+          <h2 class="section__title">Eksploro <span>Pronën.</span></h2>
+
           <div class="media__content">
             <!-- 3D Rotating View of Residence with FBX Model -->
             <div class="media__3d-view">
@@ -600,20 +628,27 @@
                 <div id="loading-indicator" class="loading-indicator">
                   <p>Duke ngarkuar modelin 3D...</p>
                 </div>
-                <div id="error-message" class="error-message" style="display: none;">
-                  <p>Gabim në ngarkimin e modelit. Po shfaqet pamje alternative.</p>
+                <div
+                  id="error-message"
+                  class="error-message"
+                  style="display: none"
+                >
+                  <p>
+                    Gabim në ngarkimin e modelit. Po shfaqet pamje alternative.
+                  </p>
                 </div>
               </div>
-              <p class="view-3d-hint">Klikoni dhe tërhiqni për të rrotulluar | Scroll për zoom</p>
+              <p class="view-3d-hint">
+                Klikoni dhe tërhiqni për të rrotulluar | Scroll për zoom
+              </p>
             </div>
 
             <!-- Compact horizontal layout for video and map -->
             <div class="media__compact-row">
               <!-- Video element with fallback - horizontal -->
               <div class="media__video-compact">
-              <h3>Tur Virtual</h3>
-              <video controls poster="assets/video/tour-thumbnail.png">
-                  
+                <h3>Tur Virtual</h3>
+                <video controls poster="assets/video/tour-thumbnail.png">
                   <source src="assets/video/tour.mp4" type="video/mp4" />
                   <source src="assets/video/tour.webm" type="video/webm" />
                   <track
@@ -623,7 +658,10 @@
                     label="English"
                     default
                   />
-                  <p>Shfletuesi juaj nuk mbështet elementin video ose skedari video nuk është i disponueshëm.</p>
+                  <p>
+                    Shfletuesi juaj nuk mbështet elementin video ose skedari
+                    video nuk është i disponueshëm.
+                  </p>
                 </video>
               </div>
 
@@ -632,7 +670,7 @@
                 <h3>Harta</h3>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.789123456789!2d21.1613269!3d42.6555491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ee896b552d7%3A0x31bf5e925cb705a3!2sFaculty%20of%20Mathematics%20and%20Natural%20Sciences!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
-                  style="border:0;"
+                  style="border: 0"
                   allowfullscreen=""
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
@@ -649,21 +687,25 @@
                 <audio controls>
                   <source src="assets/audio/info.mp3" type="audio/mpeg" />
                   <source src="assets/audio/info.ogg" type="audio/ogg" />
-                  <p>Shfletuesi juaj nuk mbështet elementin audio. <a href="assets/audio/info.mp3">Shkarkoni skedarin audio</a>.</p>
+                  <p>
+                    Shfletuesi juaj nuk mbështet elementin audio.
+                    <a href="assets/audio/info.mp3">Shkarkoni skedarin audio</a
+                    >.
+                  </p>
                 </audio>
               </div>
 
               <!-- iframe for YouTube video - compact -->
               <div class="media__youtube-compact">
-                <h3>Video YouTube</h3>
+                <h3>Prezantim video i shtëpisë luksoze</h3>
                 <div class="video-container">
-                <iframe
-                src="https://www.youtube.com/embed/lpzEd8gpWVM"
-                title="Video për Real Estate"
-                allowfullscreen>
+                  <iframe
+                    src="https://www.youtube.com/embed/lpzEd8gpWVM"
+                    title="Video për Real Estate"
+                    allowfullscreen
+                  >
                   </iframe>
-                    </div>
-
+                </div>
               </div>
             </div>
           </div>
@@ -795,11 +837,17 @@
     </a>
 
     <!-- React and ReactDOM from CDN -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
     <!-- Babel Standalone for JSX transformation -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    
+
     <!-- Three.js and Loaders for 3D model rendering -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <!-- Load Three.js loaders from jsDelivr (more reliable) -->
@@ -807,7 +855,7 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/MTLLoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/FBXLoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/libs/inflate.min.js"></script>
-    
+
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
