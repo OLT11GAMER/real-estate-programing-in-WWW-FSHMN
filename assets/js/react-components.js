@@ -266,12 +266,9 @@ function PropertyFilter() {
   );
 }
 
-// Mount React component when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  const rootElement = document.getElementById('react-property-filter');
-  if (rootElement) {
-    const root = ReactDOM.createRoot(rootElement);
-    root.render(<PropertyFilter />);
-  }
-});
+// Mount React PropertyFilter component if root exists
+const reactRoot = document.getElementById('react-property-filter');
+if (reactRoot) {
+  ReactDOM.createRoot(reactRoot).render(<PropertyFilter />);
+}
 
